@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Домашня</string>
+    <string name="library">Бібліотека</string>
+    <string name="liked">Вподобане</string>
+    <string name="profile">Профіль</string>
+
+    <string name="app_name">PrepWise</string>
+    <string name="level">Рівень</string>
+    <string name="category">Категорія</string>
+    <string name="questions">питання</string>
+    <string name="article_book">Назва</string>
+    <string name="description">Опис</string>
+    <string name="free_trial">Безкоштовна версія</string>
+    <string name="recommended_from_your_following">Рекомендовано від ваших друзів</string>
+    <string name="question_sets">Навчальні модулі</string>
+    <string name="resource">Ресурси</string>
+    <string name="enter_your_request">Введіть ваш запит</string>
+    <string name="your_activity">Ваша активність</string>
+
+    <string name="welcome_back">З поверненням!</string>
+    <string name="enter_your_credential_for_login">Введіть свої дані для входу</string>
+    <string name="Login">Вхід</string>
+    <string name="forgot_password">Забули пароль?</string>
+    <string name="or">або</string>
+    <string name="continue_with_Google">Продовжит з Google</string>
+    <string name="username_email">Username/Email</string>
+    <string name="password">Пароль</string>
+
+    <string name="sign_up">Реєстрація</string>
+    <string name="create_your_account">Створіть новий акаунт</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Підтверження пароля</string>
+
+    <string name="location">Розташування</string>
+    <string name="my_people">Мої люди</string>
+    <string name="ask_a_question">Задати запитання</string>
+    <string name="prepWise_premium">PrepWise Premium</string>
+    <string name="language">Мова</string>
+    <string name="english">Українська</string>
+    <string name="log_out">Вийти</string>
+    <string name="delete_account">Видалити акаунт</string>
+
+    <string name="Activity">Активність</string>
+    <string name="new_followers">Нові підписники</string>
+    <string name="you_have_won_an_award">Ви отримали нову винагороду</string>
+    <string name="you_have_studied_5_modules">Ви вивчили 5 модулів. Вам доступна нова рамка у профілі. 4д</string>
+    <string name="you_have_created_a_new_activity_thread">Ви створили новий ланцюжок активності</string>
+    <string name="you_have_received_a_help_request">Ви отримали запит на допомогу</string>
+    <string name="can_you_help_me_with_this_question_please">Чи можете ви допомогти мені з цим запитанням? 5d
+Натисніть, щоб переглянути питання -></string>
+    <string name="you_have_received_an_answer_to_your_request">Ви отримали відповідь на свій запит</string>
+    <string name="here_is_my_answer_maybe_it_will_help">Ось моя відповідь, можливо, це допоможе. 5d
+Натисніть, щоб переглянути відповіді -></string>
+
+    <string name="new_folder">Нова папка</string>
+    <string name="edit_folder">Редагування папки</string>
+    <string name="cancel">Скасувати</string>
+    <string name="save">Зберегти</string>
+    <string name="title">Заголовок</string>
+    <string name="by">від</string>
+
+    <string name="new_question">Нове питання</string>
+    <string name="incoming">Incoming</string>
+    <string name="question">Питання</string>
+    <string name="answer">Відповідь</string>
+</resources>

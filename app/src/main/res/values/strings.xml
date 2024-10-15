@@ -1,0 +1,70 @@
+<resources>
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="liked">Liked</string>
+    <string name="profile">Profile</string>
+
+    <string name="app_name">PrepWise</string>
+    <string name="level">Level</string>
+    <string name="category">Category</string>
+    <string name="questions">questions</string>
+    <string name="article_book">Article/book</string>
+    <string name="description">Description</string>
+    <string name="free_trial">Free trial</string>
+    <string name="enter_your_request">Enter your request</string>
+    <string name="recommended_from_your_following">Recommended from your following</string>
+    <string name="question_sets">Question sets</string>
+    <string name="resource">Resource</string>
+    <string name="your_activity">Your activity</string>
+
+    <string name="welcome_back">Welcome Back</string>
+    <string name="enter_your_credential_for_login">Enter your credential for login</string>
+    <string name="Login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="or">or</string>
+    <string name="continue_with_Google">Continue with Google</string>
+    <string name="username_email">Username/Email</string>
+    <string name="password">Password</string>
+
+    <string name="sign_up">Sign up</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm password</string>
+
+    <string name="location">Location</string>
+    <string name="my_people">My People</string>
+    <string name="ask_a_question">Ask a Question</string>
+    <string name="prepWise_premium">PrepWise Premium</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="log_out">Log out</string>
+    <string name="delete_account">Delete account</string>
+
+    <string name="Activity">Activity</string>
+    <string name="new_followers">New followers</string>
+    <string name="you_have_won_an_award">You have won an award</string>
+    <string name="you_have_studied_5_modules">You have studied 5 modules. A new profile frame is available to you. 4d</string>
+    <string name="you_have_created_a_new_activity_thread">You have created a new activity thread</string>
+    <string name="you_have_received_a_help_request">You have received a help request</string>
+    <string name="can_you_help_me_with_this_question_please">Can you help me with this question please? 5d
+Сlick to view questions -></string>
+    <string name="you_have_received_an_answer_to_your_request">You have received an answer to your request</string>
+    <string name="here_is_my_answer_maybe_it_will_help">Here is my answer, maybe it will help. 5d
+Сlick to view answers -></string>
+
+    <string name="new_folder">New folder</string>
+    <string name="edit_folder">Edit folder</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="by">by</string>
+
+    <string name="new_question">New question</string>
+    <string name="incoming">Incoming</string>
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

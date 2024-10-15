@@ -1,4 +1,4 @@
-Happy happy happy
+Happy happy happy!
 
 # Getting Started with Create React App
 

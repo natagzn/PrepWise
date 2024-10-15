@@ -1,0 +1,223 @@
+.container {
+  width: 440px;
+  height: 170px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Додано */
+}
+
+.iconContainer {
+  display: flex; /* Додаємо flexbox */
+  align-items: center; /* Центруємо по вертикалі */
+  gap: 5px; /* Відстань між іконкою і назвою */
+}
+
+.icon {
+  width: 35.64px; /* Ширина контейнера */
+  height: 23px; /* Висота контейнера */
+  background-image: url('./Vector.svg'); /* Путь до зображення */
+  background-size: contain; /* Заповнення простору, зберігаючи пропорції */
+  background-repeat: no-repeat; /* Не повторювати зображення */
+  background-position: center; /* Вирівнювання зображення по центру контейнера */
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.title {
+  width: fit-content; /* Ширина тексту */
+  height: auto; /* Змінюємо висоту на авто, щоб текст займав лише необхідний простір */
+  color: black;
+  font-size: 23px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  display: flex; /* Додаємо flexbox */
+  align-items: center; /* Центруємо по вертикалі */
+  justify-content: flex-start; /* Вирівнюємо по лівому краю */
+  margin: 0; /* Прибираємо відступи, якщо вони є */
+  padding: 0; /* Прибираємо внутрішні відступи, якщо вони є */
+}
+
+.savedIcon {
+  width: 23px;
+  height: 20px;
+  position: relative;
+}
+
+.saveIndicator {
+  width: 23px;
+  height: 20px;
+  background: #f96f5d;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.questions-count {
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap; /* Якщо потрібно, щоб категорії займали кілька рядків */
+  gap: 5px; /* Відстань між категоріями */
+}
+
+.category {
+  padding: 5px 10px;
+  background: #d6dbe1;
+  border-radius: 10px;
+  color: black;
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.userIcon {
+  width: 25px;
+  height: 23px;
+  background-image: url('./Group.svg');
+  background-size: contain; /* Заповнення простору, зберігаючи пропорції */
+  background-repeat: no-repeat; /* Не повторювати зображення */
+  background-position: center; /* Вирівнювання зображення по центру контейнера */
+}
+
+.userDetail1,
+.userDetail2,
+.userFrame {
+  position: absolute;
+  border: 1px solid black;
+}
+
+.userDetail1 {
+  width: 8.03px;
+  height: 7.33px;
+  left: 7.75px;
+  top: 4.5px;
+}
+
+.userDetail2 {
+  width: 12.95px;
+  height: 6.09px;
+  left: 5.34px;
+  top: 11.1px;
+}
+
+.userFrame {
+  width: 24.09px;
+  height: 22px;
+  left: 0;
+  top: 0;
+}
+
+.username {
+  width: 110.6px;
+  color: black;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.date {
+  width: 96px;
+  color: #5a5a5a;
+  font-size: 18px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* Медіа запити для адаптивності шрифтів */
+/* Медіа запити для адаптивності шрифтів */
+@media (max-width: 600px) {
+  .container {
+    gap: 10px;
+    height: fit-content;
+    padding: 10px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 20px;
+  }
+
+  .title {
+    font-size: 20px; /* Зменшений шрифт для заголовка */
+  }
+
+  .username {
+    font-size: 18px; /* Зменшений шрифт для імені */
+  }
+
+  .date {
+    font-size: 16px; /* Зменшений шрифт для дати */
+  }
+
+  .categories {
+    gap: 3px; /* Зменшена відстань між категоріями */
+  }
+
+  .category {
+    font-size: 12px; /* Зменшений шрифт для категорій */
+    padding: 4px 8px; /* Зменшені відступи для категорій */
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    height: fit-content;
+  }
+
+  .title {
+    font-size: 18px; /* Додаткове зменшення шрифту для заголовка */
+  }
+
+  .username {
+    font-size: 16px; /* Додаткове зменшення шрифту для імені */
+  }
+
+  .date {
+    font-size: 14px; /* Додаткове зменшення шрифту для дати */
+  }
+
+  .categories {
+    gap: 2px; /* Додаткове зменшення відстані між категоріями */
+  }
+
+  .category {
+    font-size: 10px; /* Додаткове зменшення шрифту для категорій */
+    padding: 3px 6px; /* Додаткове зменшення відступів для категорій */
+  }
+}

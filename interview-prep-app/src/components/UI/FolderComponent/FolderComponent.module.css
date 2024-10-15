@@ -1,0 +1,191 @@
+.container {
+  width: 440px;
+  height: 170px;
+  padding: 19px 14px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.iconContainer {
+  height: 31px;
+  position: relative;
+}
+
+.icon {
+  width: 35.64px; /* Ширина контейнера */
+  height: 23px; /* Висота контейнера */
+  background-image: url('./Vector.svg'); /* Путь до зображення */
+  background-size: contain; /* Заповнення простору, зберігаючи пропорції */
+  background-repeat: no-repeat; /* Не повторювати зображення */
+  background-position: center; /* Вирівнювання зображення по центру контейнера */
+  position: absolute;
+  top: 3px;
+}
+
+.folderName {
+  width: 151px;
+  left: 41px;
+  position: absolute;
+  color: black;
+  font-size: 23px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.savedIcon {
+  width: 23px;
+  height: 20px;
+  position: relative;
+}
+
+.saveIndicator {
+  width: 23px;
+  height: 20px;
+  background: #f96f5d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.items {
+  width: 100%;
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.userIcon {
+  width: 25px;
+  height: 23px;
+  background-image: url('./Group.svg');
+  background-size: contain; /* Заповнення простору, зберігаючи пропорції */
+  background-repeat: no-repeat; /* Не повторювати зображення */
+  background-position: center; /* Вирівнювання зображення по центру контейнера */
+}
+
+.userDetail1,
+.userDetail2,
+.userFrame {
+  position: absolute;
+  border: 1px solid black;
+}
+
+.userDetail1 {
+  width: 8.03px;
+  height: 7.33px;
+  left: 7.75px;
+  top: 4.5px;
+}
+
+.userDetail2 {
+  width: 12.95px;
+  height: 6.09px;
+  left: 5.34px;
+  top: 11.1px;
+}
+
+.userFrame {
+  width: 24.09px;
+  height: 22px;
+  left: 0;
+  top: 0;
+}
+
+.username {
+  width: 110.6px;
+  color: black;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.date {
+  width: 96px;
+  color: #5a5a5a;
+  font-size: 18px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+/* Медіа запити для адаптивності шрифтів */
+@media (max-width: 600px) {
+  .container {
+    height: 140px;
+    padding: 10px;
+  }
+
+  .icon {
+    width: 32px; /* Ширина контейнера */
+    height: 20px;
+  }
+
+  .folderName {
+    font-size: 20px; /* Зменшений шрифт */
+  }
+
+  .items {
+    font-size: 18px; /* Зменшений шрифт */
+  }
+
+  .username {
+    font-size: 18px; /* Зменшений шрифт */
+  }
+
+  .date {
+    font-size: 16px; /* Зменшений шрифт */
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    height: 120px;
+  }
+
+  .folderName {
+    font-size: 18px; /* Додаткове зменшення шрифту */
+  }
+
+  .items {
+    font-size: 16px; /* Додаткове зменшення шрифту */
+  }
+
+  .username {
+    font-size: 16px; /* Додаткове зменшення шрифту */
+  }
+
+  .date {
+    font-size: 14px; /* Додаткове зменшення шрифту */
+  }
+}

@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  background-color: aliceblue;
+  margin: 0; /* Відміняє відступи за замовчуванням */
+  height: 100vh; /* Висота на весь екран */
+  overflow: hidden; /* Сховає прокрутку, якщо вона з'явиться */
+}

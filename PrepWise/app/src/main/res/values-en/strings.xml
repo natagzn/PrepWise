@@ -65,9 +65,9 @@
     <string name="question">Question</string>
     <string name="answer">Answer</string>
 
-    <string name="already_have_an_account">Already have an account?</string>
-    <string name="dont_have_an_account">Don`t have an account? </string>
-
     <string name="choose_language">Choose language</string>
+
+    <string name="already_have_an_account">Already have an account? </string>
+    <string name="dont_have_an_account">Don`t have an account? </string>
 
 </resources>

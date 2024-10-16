@@ -23,7 +23,7 @@
     <string name="Login">Вхід</string>
     <string name="forgot_password">Забули пароль?</string>
     <string name="or">або</string>
-    <string name="continue_with_Google">Продовжит з Google</string>
+    <string name="continue_with_Google">Продовжити з Google</string>
     <string name="username_email">Username/Email</string>
     <string name="password">Пароль</string>
 
@@ -65,4 +65,9 @@
     <string name="incoming">Incoming</string>
     <string name="question">Питання</string>
     <string name="answer">Відповідь</string>
+
+    <string name="choose_language">Оберіть мову</string>
+
+    <string name="already_have_an_account">Вже маєте акаунт? </string>
+    <string name="dont_have_an_account">Немає акаунту? </string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.prepwise.activities
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.prepwise.LocaleHelper.loadLocale
 import com.example.prepwise.R
 import com.example.prepwise.fragments.HomeFragment
 import com.example.prepwise.fragments.ProfileFragment
@@ -22,6 +24,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        loadLocale(this)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.visibility = View.VISIBLE

@@ -1,10 +1,13 @@
 package com.example.prepwise.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.prepwise.LocaleHelper.loadLocale
 import com.example.prepwise.R
 
 class SignUpActivity : AppCompatActivity() {
@@ -16,6 +19,16 @@ class SignUpActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        loadLocale(this)
+
+        // Перехід на сторінку входу
+        val goToLogin: TextView = findViewById(R.id.go_to_login)
+        goToLogin.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

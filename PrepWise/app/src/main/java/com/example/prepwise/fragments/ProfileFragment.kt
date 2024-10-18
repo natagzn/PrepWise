@@ -47,23 +47,27 @@ class ProfileFragment : Fragment() {
         return view
     }
 
-    private fun showChangeLang(){
+    private fun showChangeLang() {
         val listItems = arrayOf("Українська", "English")
 
         val mBuilder = AlertDialog.Builder(requireContext())
         mBuilder.setTitle(getString(R.string.choose_language))
-        mBuilder.setSingleChoiceItems(listItems, -1){ dialog, which ->
-            if(which==0){
-                setLocale("uk", requireContext())
-                requireActivity().recreate()}
-            else if (which==1){
-                setLocale("en", requireContext())
-                requireActivity().recreate()}
-
+        // Використовуємо setItems замість setSingleChoiceItems
+        mBuilder.setItems(listItems) { dialog, which ->
+            when (which) {
+                0 -> {
+                    setLocale("uk", requireContext())
+                    requireActivity().recreate()
+                }
+                1 -> {
+                    setLocale("en", requireContext())
+                    requireActivity().recreate()
+                }
+            }
             dialog.dismiss()
         }
 
-        val mDialiog = mBuilder.create()
-        mDialiog.show()
+        val mDialog = mBuilder.create()
+        mDialog.show()
     }
 }

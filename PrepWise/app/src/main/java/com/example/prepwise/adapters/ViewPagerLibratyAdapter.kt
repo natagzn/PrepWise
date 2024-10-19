@@ -8,7 +8,7 @@ import com.example.prepwise.fragments.QuestionSetsFragment
 import com.example.prepwise.fragments.ResourcesFragment
 import com.example.prepwise.fragments.SharedFragment
 
-class ViewPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
+class ViewPagerLibratyAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {
         return 4
     }

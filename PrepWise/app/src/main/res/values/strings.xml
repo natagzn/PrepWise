@@ -40,17 +40,18 @@
     <string name="english">English</string>
     <string name="log_out">Log out</string>
     <string name="delete_account">Delete account</string>
+    <string name="question_for_email">Question</string>
 
     <string name="Activity">Activity</string>
     <string name="new_followers">New followers</string>
     <string name="you_have_won_an_award">You have won an award</string>
-    <string name="you_have_studied_5_modules">You have studied 5 modules. A new profile frame is available to you. 4d</string>
+    <string name="you_have_studied_5_modules">You have studied 5 modules. A new profile frame is available to you.</string>
     <string name="you_have_created_a_new_activity_thread">You have created a new activity thread</string>
     <string name="you_have_received_a_help_request">You have received a help request</string>
-    <string name="can_you_help_me_with_this_question_please">Can you help me with this question please? 5d
+    <string name="can_you_help_me_with_this_question_please">Can you help me with this question please?
 Сlick to view questions -></string>
     <string name="you_have_received_an_answer_to_your_request">You have received an answer to your request</string>
-    <string name="here_is_my_answer_maybe_it_will_help">Here is my answer, maybe it will help. 5d
+    <string name="here_is_my_answer_maybe_it_will_help">Here is my answer, maybe it will help.
 Сlick to view answers -></string>
 
     <string name="new_folder">New folder</string>
@@ -92,5 +93,16 @@
     <string name="save_20">Save 20%</string>
     <string name="per_year">per year</string>
     <string name="subscribe_now">SUBSCRIBE NOW</string>
+
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="friends">Friends</string>
+
+    <string name="private_str">private</string>
+    <string name="public_str">public</string>
+
+    <string name="view_profile">View profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

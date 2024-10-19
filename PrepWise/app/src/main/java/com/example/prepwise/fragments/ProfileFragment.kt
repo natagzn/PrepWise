@@ -1,27 +1,21 @@
 package com.example.prepwise.fragments
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.navigation.fragment.findNavController
 import com.example.prepwise.LocaleHelper.loadLocale
 import com.example.prepwise.LocaleHelper.setLocale
 import com.example.prepwise.R
 import com.example.prepwise.activities.LoginActivity
+import com.example.prepwise.activities.PeopleActivity
 import com.example.prepwise.activities.PremiumActivity
-import java.util.Locale
 
 class ProfileFragment : Fragment() {
 
@@ -60,8 +54,8 @@ class ProfileFragment : Fragment() {
         }
 
         // Преміум
-        val goToPremium: LinearLayout = view.findViewById(R.id.premium)
-        goToPremium.setOnClickListener{
+        val premium: LinearLayout = view.findViewById(R.id.premium)
+        premium.setOnClickListener{
             val intent = Intent(requireActivity(), PremiumActivity::class.java)
             startActivity(intent)
 
@@ -74,12 +68,19 @@ class ProfileFragment : Fragment() {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL, arrayOf("nahalkaanna06@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, "Запитання")
+                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.question_sets))
             }
             startActivity(emailIntent)
         }
 
+        // Преміум
+        val myPeople: LinearLayout = view.findViewById(R.id.my_people)
+        myPeople.setOnClickListener{
+            val intent = Intent(requireActivity(), PeopleActivity::class.java)
+            startActivity(intent)
 
+            requireActivity().finish()
+        }
 
         return view
     }

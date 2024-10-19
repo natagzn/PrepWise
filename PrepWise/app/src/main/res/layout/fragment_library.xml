@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/rb5hf3b42d"
+            android:id="@+id/name_page"
             style="@style/bold_20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rb5hf3b42d">
+            app:layout_constraintTop_toBottomOf="@+id/name_page">
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/question_set"

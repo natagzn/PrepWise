@@ -40,6 +40,7 @@
     <string name="english">English</string>
     <string name="log_out">Log out</string>
     <string name="delete_account">Delete account</string>
+    <string name="question_for_email">Question</string>
 
     <string name="Activity">Activity</string>
     <string name="new_followers">New followers</string>
@@ -74,5 +75,33 @@
     <string name="shared">Shared</string>
     <string name="sort">Sort</string>
     <string name="filter">Filter</string>
+
+    <string name="search_your_sets">Search your sets</string>
+    <string name="search_your_folders">Search your folders</string>
+    <string name="search_shared_sets">Search shared sets</string>
+    <string name="search_your_resources">Search your resources</string>
+
+    <string name="premium">PREMIUM</string>
+    <string name="you_will_receive">You will receive:</string>
+    <string name="unlimited_search_results">unlimited search results</string>
+    <string name="unlimited_sets">unlimited sets</string>
+    <string name="unlimited_number_of_questions_in_the_set">unlimited number of questions in the set</string>
+    <string name="the_ability_to_share_access_to_the_set">ability to share access to the set</string>
+    <string name="one_month">1 Month</string>
+    <string name="three_day_free_trial">3 day free trial</string>
+    <string name="per_month">per month</string>
+    <string name="one_year">1 Year</string>
+    <string name="save_20">Save 20%</string>
+    <string name="per_year">per year</string>
+    <string name="subscribe_now">SUBSCRIBE NOW</string>
+
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="friends">Friends</string>
+
+    <string name="private_str">private</string>
+    <string name="public_str">public</string>
+
+    <string name="view_profile">View profile</string>
 
 </resources>

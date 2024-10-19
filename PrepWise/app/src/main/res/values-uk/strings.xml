@@ -104,4 +104,9 @@
     <string name="public_str">публічний</string>
 
     <string name="view_profile">Переглянути профіль</string>
+    <string name="sharing">поширено</string>
+    <string name="sharing_view">поширено/перегляд</string>
+    <string name="sharing_edit">поширено/редагування</string>
+    <string name="author">Автор:</string>
+    <string name="co_authors">Співавтори:</string>
 </resources>

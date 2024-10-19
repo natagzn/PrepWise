@@ -13,7 +13,7 @@ class FriendFragment : Fragment() {
     private lateinit var list: ArrayList<String>
 
     companion object {
-        private const val ARG_LIST = "arg_list"
+        private const val ARG_LIST = "friend_list"
 
         fun newInstance(list: ArrayList<String>): FriendFragment {
             val fragment = FriendFragment()

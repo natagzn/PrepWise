@@ -12,6 +12,7 @@ import com.example.prepwise.LocaleHelper.loadLocale
 import com.example.prepwise.R
 import com.example.prepwise.fragments.HomeFragment
 import com.example.prepwise.fragments.LibraryFragment
+import com.example.prepwise.fragments.LikedFragment
 import com.example.prepwise.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.bottom_liked -> {
-                    //replaceFragment(LikedFragment())
+                    replaceFragment(LikedFragment())
                     true
                 }
                 R.id.bottom_library -> {

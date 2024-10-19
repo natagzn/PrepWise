@@ -8,9 +8,24 @@ import android.view.ViewGroup
 import com.example.prepwise.R
 class SharedFragment : Fragment() {
 
+    private lateinit var sharedList: ArrayList<String>
+    companion object {
+        private const val ARG_SHARED_LIST = "shared_list"
+
+        fun newInstance(sharedList: ArrayList<String>): SharedFragment {
+            val fragment = SharedFragment()
+            val args = Bundle()
+            args.putStringArrayList(ARG_SHARED_LIST, sharedList)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        arguments?.let {
+            sharedList = it.getStringArrayList(ARG_SHARED_LIST) ?: arrayListOf()
+        }
     }
 
     override fun onCreateView(

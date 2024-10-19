@@ -13,6 +13,12 @@
         android:theme="@style/Theme.PrepWise"
         tools:targetApi="31">
         <activity
+            android:name=".activities.PeopleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PremiumActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.NewQuestionActivity"
             android:exported="false" />
         <activity

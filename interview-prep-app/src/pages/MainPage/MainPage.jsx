@@ -15,12 +15,27 @@ const MainPage = () => {
     level: 'Easy',
     isLiked: index % 2 === 0,
     visibility: 'public',
+    title: 'Name of set ' + index,
   }));
 
-  const resources = Array.from({ length: 6 }, (_, index) => ({
+  const resourceTitles = [
+    'Book1 Author A.A.',
+    'Book2 Author B.B.',
+    'Article3 C.C.',
+    'Book4 Author D.D.',
+    'Book5 Author E.E.',
+  ];
+
+  const categories = ['Development', 'Design', 'Marketing', 'Science', 'Arts'];
+
+  const resources = Array.from({ length: 5 }, (_, index) => ({
     id: index,
-    title: `Resource ${index + 1}`,
-    description: 'Description for resource ' + (index + 1),
+    title: resourceTitles[index % resourceTitles.length],
+    category: categories[index % categories.length],
+    username: 'user' + index,
+    date: '2024-10-19',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    isLiked: index % 2 === 0,
   }));
 
   const [visibleItems, setVisibleItems] = useState(3);
@@ -108,6 +123,7 @@ const MainPage = () => {
                   level={set.level}
                   isLiked={set.isLiked}
                   visibility={set.visibility}
+                  title={set.title}
                 />
               </div>
             ))}
@@ -147,8 +163,13 @@ const MainPage = () => {
                 style={{ flex: `0 0 ${100 / visibleItems}%` }}
               >
                 <ResourceComponent
+                  key={resource.id}
                   title={resource.title}
+                  category={resource.category}
+                  username={resource.username}
+                  date={resource.date}
                   description={resource.description}
+                  report={true}
                 />
               </div>
             ))}

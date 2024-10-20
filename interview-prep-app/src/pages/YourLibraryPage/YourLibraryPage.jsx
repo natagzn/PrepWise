@@ -3,7 +3,7 @@ import styles from './YourLibraryPage.module.css';
 import QuestionSetsComponent from '../../components/UI/ForLibrary/QuestionSetsLibrary/QuestionSetsLibrary';
 import FoldersLibrary from '../../components/UI/ForLibrary/FoldersLibrary/FoldersLibrary';
 import SharedComponent from '../../components/UI/ForLibrary/SharedComponent/SharedLibrary';
-import ResourcesComponent from '../../components/UI/ForLibrary/ResourcesLibrary/ResourcesLibrary';
+import ResourcesLibrary from '../../components/UI/ForLibrary/ResourcesLibrary/ResourcesLibrary';
 import HeaderComponent from '../../components/UI/HeaderComponent/HeaderComponent';
 
 const YourLibraryPage = () => {
@@ -19,7 +19,7 @@ const YourLibraryPage = () => {
       case 'shared':
         return <SharedComponent />;
       case 'resources':
-        return <ResourcesComponent />;
+        return <ResourcesLibrary />;
       default:
         return null;
     }

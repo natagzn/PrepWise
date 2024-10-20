@@ -1,0 +1,76 @@
+/* Основний контейнер для ресурсів */
+.resourcesWrapper {
+  margin: 0 auto;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Контейнер для фільтрів і сортування */
+.filterSortWrapper {
+  display: flex;
+  justify-content: space-between; /* Відстань між лівою і правою частинами */
+  align-items: center; /* Центрує елементи по вертикалі */
+  margin-bottom: 20px;
+  height: fit-content;
+  min-width: 400px;
+}
+
+/* Ліва група з сортуванням і фільтрами */
+.leftGroup {
+  display: flex; /* Згрупування сортування і фільтра */
+  align-items: center; /* Центрує елементи по вертикалі */
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+/* Стиль для компонента сортування */
+.sortComponent {
+  width: 250px; /* Фіксована ширина для сортування */
+}
+
+/* Стиль для компонента фільтра */
+.filterComponent {
+  width: 150px; /* Фіксована ширина для фільтра категорії */
+}
+
+/* Стиль для компонента пошуку */
+.search {
+  max-width: 500px; /* Максимальна ширина */
+  width: 500px;
+}
+
+/* Контейнер для відображення списку ресурсів */
+.resourcesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Відстань між ресурсами */
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  .filterSortWrapper {
+    flex-direction: column; /* Зміна на вертикальне вирівнювання */
+    align-items: center; /* Центрує елементи по горизонталі */
+    justify-content: center;
+  }
+
+  .leftGroup {
+    justify-content: center; /* Центрує групу сортування і фільтра */
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .search {
+    max-width: 90%; /* Зменшена максимальна ширина */
+    width: 90%;
+  }
+
+  .resourcesList {
+    justify-content: center;
+  }
+}

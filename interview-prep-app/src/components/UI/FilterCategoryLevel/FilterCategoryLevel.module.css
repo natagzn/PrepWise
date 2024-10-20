@@ -1,0 +1,77 @@
+.filterButton {
+  width: 100%;
+  padding: 5px 20px;
+  background: white;
+  border: 1px solid #5a5a5a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Базовий розмір шрифту */
+  font-family: 'Noto Sans';
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+  .filterButton {
+    font-size: 16px; /* Зменшуємо розмір шрифту */
+    padding: 5px 15px; /* Зменшуємо відступи */
+  }
+
+  .modalContent {
+    max-width: 90%; /* Зменшуємо максимальну ширину для малих екранів */
+    width: 100%; /* Ширина 100% */
+    padding: 15px; /* Зменшуємо відступи в модальному вікні */
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  max-width: 500px; /* Максимальна ширина модального вікна */
+  width: 100%; /* Ширина 100% для адаптивності */
+  margin: 20px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modalActions button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Адаптивність кнопок в дії */
+.modalActions button:first-child {
+  background: #0056d7;
+  color: white;
+  font-size: inherit; /* Використовуємо спадкування для адаптивності */
+}
+
+.modalActions button:last-child {
+  background: transparent;
+  border: 1px solid #0056d7;
+  color: #0056d7;
+  font-size: inherit; /* Використовуємо спадкування для адаптивності */
+}

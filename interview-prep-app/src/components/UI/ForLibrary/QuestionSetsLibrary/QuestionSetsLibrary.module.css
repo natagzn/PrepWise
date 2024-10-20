@@ -1,0 +1,73 @@
+.questionSetsWrapper {
+  margin: 0 auto;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.filterSortWrapper {
+  display: flex;
+  justify-content: space-between; /* Відстань між лівою і правою частинами */
+  align-items: center; /* Центрує елементи по вертикалі */
+  margin-bottom: 20px;
+  height: fit-content;
+  min-width: 400px;
+}
+
+.leftGroup {
+  display: flex; /* Згрупування Sort і Filter */
+  align-items: center; /* Центрує елементи по вертикалі */
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.sortComponent {
+  width: 250px; /* Фіксована ширина для SortComponent */
+}
+
+.filterComponent {
+  width: 90px; /* Фіксована ширина для FilterCategoryLevel */
+}
+
+/* Новий стиль для компонента пошуку */
+.search {
+  max-width: 400px; /* Максимальна ширина */
+}
+
+/* Медіа-запити для екранів шириною менше або рівною 1050 пікселів */
+@media (max-width: 768px) {
+  .filterSortWrapper {
+    flex-direction: column; /* Зміна на вертикальне вирівнювання */
+    align-items: center; /* Центрує елементи по горизонталі */
+    justify-content: center;
+  }
+
+  .leftGroup {
+    justify-content: center; /* Центрує групу Sort і Filter */
+    margin-bottom: 10px; /* Відступ під групою */
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .search {
+    max-width: 90%; /* Зменшити максимальну ширину на менших екранах */
+    width: 90%;
+  }
+
+  .questionSetsWrapper {
+    align-items: center;
+  }
+}
+
+.appliedFiltersWrapper {
+  margin: 10px 0; /* Відступ для блоку з інформацією про застосовані фільтри */
+  font-weight: bold; /* Виділити текст */
+}
+
+.questionSetsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

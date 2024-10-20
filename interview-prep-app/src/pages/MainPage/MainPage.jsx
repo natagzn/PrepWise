@@ -14,7 +14,7 @@ const MainPage = () => {
     date: '2024-10-19',
     level: 'Easy',
     isLiked: index % 2 === 0,
-    visibility: index % 2 === 0 ? 'public' : 'private',
+    visibility: 'public',
   }));
 
   const resources = Array.from({ length: 6 }, (_, index) => ({

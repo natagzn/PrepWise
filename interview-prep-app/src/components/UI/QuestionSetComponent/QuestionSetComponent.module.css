@@ -17,6 +17,7 @@
   align-items: center;
   position: relative;
 }
+
 .iconContainer {
   display: flex;
   align-items: center;
@@ -36,13 +37,12 @@
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
 }
+
 .savedIcon {
-  width: auto; /* Зміна ширини на авто */
-  height: 20px; /* Встановіть висоту, якщо потрібно */
   display: flex;
   align-items: center; /* Вирівнювання по вертикалі */
-  gap: 5px; /* Відстань між іконкою та текстом */
-  margin-left: auto; /* Додано, щоб текст залишався з правого краю */
+  gap: 10px; /* Відстань між статусом і лайком */
+  margin-left: auto;
 }
 
 .visibilityContainer {
@@ -51,13 +51,18 @@
 }
 
 .visibilityIcon {
-  width: 20px; /* Встановіть бажану ширину іконки */
-  height: 20px; /* Встановіть бажану висоту іконки */
+  width: 20px;
+  height: 20px;
 }
 
 .visibilityInfo {
   white-space: nowrap;
   margin-left: 5px;
+}
+
+.likeIcon {
+  display: flex;
+  align-items: center;
 }
 
 /* Рядок для рівня та кількості запитань */
@@ -127,7 +132,6 @@
   font-size: 18px;
   color: #5a5a5a;
 }
-
 /* Медіа запити для адаптивності шрифтів */
 @media (max-width: 600px) {
   .container {

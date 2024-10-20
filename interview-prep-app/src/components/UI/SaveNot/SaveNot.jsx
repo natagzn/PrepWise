@@ -3,8 +3,8 @@ import filledHeart from './property-1-saved.svg'; // Шлях до заповн�
 import outlinedHeart from './property-1-not-saved.svg'; // Шлях до контурного серця
 import styles from './SaveNot.module.css'; // Імпорт стилів з CSS модуля
 
-export const SaveNot = () => {
-  const [isSaved, setIsSaved] = useState(false); // Стан для збереження
+export const SaveNot = ({ state }) => {
+  const [isSaved, setIsSaved] = useState(state); // Стан для збереження
 
   const handleToggleSave = () => {
     setIsSaved((prev) => !prev); // Перемикає стан збереження

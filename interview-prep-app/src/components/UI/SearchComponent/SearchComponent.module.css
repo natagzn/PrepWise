@@ -2,15 +2,13 @@
   width: 100%;
   height: 35px;
   padding-left: 17px;
-  padding-right: 20px;
+  padding-right: 17px;
   background: white;
   border-radius: 15px;
   border: 1px #5a5a5a solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .search-input {
@@ -43,8 +41,6 @@
     height: 30px; /* Зменшення висоти для мобільних */
     padding-left: 10px; /* Зменшення відступів для мобільних */
     padding-right: 15px;
-    margin-left: 5px; /* Зменшення відступів зліва */
-    margin-right: 5px; /* Зменшення відступів справа */
   }
 
   .search-input {

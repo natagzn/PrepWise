@@ -15,6 +15,7 @@ import AuthPage from './pages/Auth/AuthPage';
 import MainPage from './pages/MainPage/MainPage';
 import { Route, Routes } from 'react-router-dom';
 import YourLibraryPage from './pages/YourLibraryPage/YourLibraryPage';
+import NotificationPage from './pages/NotificationPage/NotificationPage';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -34,6 +35,7 @@ function App() {
       <Route path="/home" element={<MainPage />} />
       <Route path="/home" element={<MainPage />} />
       <Route path="/library" element={<YourLibraryPage />} />
+      <Route path="/notifications" element={<NotificationPage />} />
       {/* Додай інші сторінки за потреби */}
     </Routes>
   );

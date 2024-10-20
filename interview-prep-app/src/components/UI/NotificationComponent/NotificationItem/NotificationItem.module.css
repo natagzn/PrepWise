@@ -16,7 +16,7 @@
   flex-grow: 1; /* Текст розтягується на всю доступну ширину */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   /* Для екранів менших за 768px */
   .notificationItem {
     flex-direction: column; /* Елементи переходять в колонку */

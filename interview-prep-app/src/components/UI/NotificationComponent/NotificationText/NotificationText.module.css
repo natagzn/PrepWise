@@ -38,27 +38,27 @@
   right: 10; /* Відступ для відокремлення дати */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   .textGroup {
     flex-direction: column; /* Змінює напрямок на колонку при зменшенні ширини */
   }
 }
 
 /* Медіазапит для зменшення шрифта */
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   .textGroup {
     flex-direction: column; /* Змінює напрямок на колонку при зменшенні ширини */
   }
 
   .message {
-    font-size: 18px; /* Зменшений розмір шрифту для message */
+    font-size: 15px; /* Зменшений розмір шрифту для message */
   }
 
   .description {
-    font-size: 18px; /* Зменшений розмір шрифту для description */
+    font-size: 15px; /* Зменшений розмір шрифту для description */
   }
 
   .date {
-    font-size: 16px; /* Зменшений розмір шрифту для дати */
+    font-size: 15px; /* Зменшений розмір шрифту для дати */
   }
 }

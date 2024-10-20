@@ -13,45 +13,43 @@ const QuestionSetComponent = (props) => {
       <div className={styles.header}>
         <div className={styles.iconContainer}>
           <div className={styles.icon}></div>
-          <div className={styles.title}>Name of set</div>
+          <div className={styles.title}>{props.title}</div>
         </div>
         <div className={styles.savedIcon}>
-          <div className={styles.savedIcon}>
-            {/* Відображення статусу public/private */}
-            {typeof props.visibility !== 'undefined' ? (
-              <div className={styles.visibilityContainer}>
-                {props.visibility === 'public' ? (
-                  <>
-                    <img
-                      src={PublicIcon}
-                      alt="Public"
-                      className={styles.visibilityIcon}
-                    />
-                    <span className={styles.visibilityInfo}> public</span>
-                  </>
-                ) : (
-                  <>
-                    <img
-                      src={PrivateIcon}
-                      alt="Private"
-                      className={styles.visibilityIcon}
-                    />
-                    <span className={styles.visibilityInfo}> private</span>
-                  </>
-                )}
-              </div>
-            ) : (
-              <span className={styles.visibilityInfo}>Not specified</span> // або нічого не відображати
-            )}
-          </div>
-
-          {/* Іконка лайку, якщо є */}
-          {typeof props.isLiked !== 'undefined' && (
-            <div className={styles.likeIcon}>
-              <SaveNot state={props.isLiked} />
+          {/* Відображення статусу public/private */}
+          {typeof props.visibility !== 'undefined' ? (
+            <div className={styles.visibilityContainer}>
+              {props.visibility === 'Public' ? (
+                <>
+                  <img
+                    src={PublicIcon}
+                    alt="Public"
+                    className={styles.visibilityIcon}
+                  />
+                  <span className={styles.visibilityInfo}> public</span>
+                </>
+              ) : (
+                <>
+                  <img
+                    src={PrivateIcon}
+                    alt="Private"
+                    className={styles.visibilityIcon}
+                  />
+                  <span className={styles.visibilityInfo}> private</span>
+                </>
+              )}
             </div>
+          ) : (
+            <span className={styles.visibilityInfo}>Not specified</span> // або нічого не відображати
           )}
         </div>
+
+        {/* Іконка лайку, якщо є */}
+        {typeof props.isLiked !== 'undefined' && (
+          <div className={styles.likeIcon}>
+            <SaveNot state={props.isLiked} />
+          </div>
+        )}
       </div>
 
       {/* Рядок для рівня та кількості запитань */}

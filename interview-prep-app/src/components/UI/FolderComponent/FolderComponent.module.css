@@ -1,6 +1,6 @@
 .container {
   width: 440px;
-  height: 120px;
+  height: 180px;
   padding: 19px 14px;
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -21,8 +21,8 @@
 }
 
 .iconContainer {
-  height: 31px;
-  position: relative;
+  display: flex;
+  align-items: center; /* Вирівнює іконку та текст по вертикалі */
 }
 
 .icon {
@@ -32,43 +32,30 @@
   background-size: contain; /* Заповнення простору, зберігаючи пропорції */
   background-repeat: no-repeat; /* Не повторювати зображення */
   background-position: center; /* Вирівнювання зображення по центру контейнера */
-  position: absolute;
-  top: 3px;
+  margin-right: 10px; /* Відступ між іконкою та назвою папки */
 }
 
 .folderName {
-  width: 151px;
-  left: 41px;
-  position: absolute;
   color: black;
   font-size: 23px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
-  word-wrap: break-word;
+  white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+  overflow: hidden; /* Сховати текст, якщо він не поміщається */
+  text-overflow: ellipsis; /* Додає три крапки, якщо текст не вміщається */
 }
 
 .savedIcon {
   width: 23px;
   height: 20px;
-  position: relative;
-}
-
-.saveIndicator {
-  width: 23px;
-  height: 20px;
-  background: #f96f5d;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .items {
-  width: 100%;
   color: #5a5a5a;
-  font-size: 20px;
+  font-size: 16px; /* Зменшено для кращого вміщення */
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  word-wrap: break-word;
+  margin-top: 5px; /* Відступ між items та footer */
 }
 
 .footer {
@@ -76,67 +63,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.userInfo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.userIcon {
-  width: 25px;
-  height: 23px;
-  background-image: url('./Group.svg');
-  background-size: contain; /* Заповнення простору, зберігаючи пропорції */
-  background-repeat: no-repeat; /* Не повторювати зображення */
-  background-position: center; /* Вирівнювання зображення по центру контейнера */
-}
-
-.userDetail1,
-.userDetail2,
-.userFrame {
-  position: absolute;
-  border: 1px solid black;
-}
-
-.userDetail1 {
-  width: 8.03px;
-  height: 7.33px;
-  left: 7.75px;
-  top: 4.5px;
-}
-
-.userDetail2 {
-  width: 12.95px;
-  height: 6.09px;
-  left: 5.34px;
-  top: 11.1px;
-}
-
-.userFrame {
-  width: 24.09px;
-  height: 22px;
-  left: 0;
-  top: 0;
-}
-
-.username {
-  width: 110.6px;
-  color: black;
-  font-size: 20px;
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 400;
-  word-wrap: break-word;
+  margin-top: 5px; /* Відступ зверху для footer */
 }
 
 .date {
-  width: 96px;
   color: #5a5a5a;
-  font-size: 18px;
+  font-size: 16px; /* Зменшений шрифт для кращого вміщення */
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  word-wrap: break-word;
 }
 
 /* Медіа запити для адаптивності шрифтів */
@@ -156,15 +90,11 @@
   }
 
   .items {
-    font-size: 18px; /* Зменшений шрифт */
-  }
-
-  .username {
-    font-size: 18px; /* Зменшений шрифт */
+    font-size: 16px; /* Зменшений шрифт */
   }
 
   .date {
-    font-size: 16px; /* Зменшений шрифт */
+    font-size: 14px; /* Зменшений шрифт */
   }
 }
 
@@ -179,14 +109,10 @@
   }
 
   .items {
-    font-size: 16px; /* Додаткове зменшення шрифту */
-  }
-
-  .username {
-    font-size: 16px; /* Додаткове зменшення шрифту */
+    font-size: 14px; /* Додаткове зменшення шрифту */
   }
 
   .date {
-    font-size: 14px; /* Додаткове зменшення шрифту */
+    font-size: 12px; /* Додаткове зменшення шрифту */
   }
 }

@@ -33,9 +33,13 @@
 }
 
 .title {
-  font-size: 23px;
+  font-size: 18px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
+  overflow: hidden; /* Сховати переповнений текст */
+  white-space: nowrap; /* Не переносити текст на новий рядок */
+  text-overflow: ellipsis; /* Додати три крапки вкінці, якщо текст не вміщується */
+  max-width: 250px; /* Встановіть максимальну ширину заголовка, змініть на ваше бажання */
 }
 
 .savedIcon {
@@ -63,6 +67,7 @@
 .likeIcon {
   display: flex;
   align-items: center;
+  margin-left: 7px;
 }
 
 /* Рядок для рівня та кількості запитань */
@@ -147,7 +152,7 @@
   }
 
   .title {
-    font-size: 20px; /* Зменшений шрифт для заголовка */
+    font-size: 15px; /* Зменшений шрифт для заголовка */
   }
 
   .username {
@@ -175,7 +180,7 @@
   }
 
   .title {
-    font-size: 18px; /* Додаткове зменшення шрифту для заголовка */
+    font-size: 13px; /* Додаткове зменшення шрифту для заголовка */
   }
 
   .username {
@@ -193,5 +198,9 @@
   .category {
     font-size: 14px; /* Додаткове зменшення шрифту для категорій */
     padding: 3px 6px; /* Додаткове зменшення відступів для категорій */
+  }
+
+  .title {
+    max-width: 170px;
   }
 }

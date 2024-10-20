@@ -9,6 +9,13 @@ const SearchComponent = ({ placeholder, onClick }) => {
     setInputValue(e.target.value);
   };
 
+  const handleBlur = () => {
+    // Якщо поле вводу порожнє, викликаємо onClick
+    if (inputValue.trim() === '') {
+      onClick(''); // Передаємо порожній рядок для очищення результатів
+    }
+  };
+
   return (
     <div className={styles['search-box']}>
       <input
@@ -16,6 +23,7 @@ const SearchComponent = ({ placeholder, onClick }) => {
         type="text"
         value={inputValue}
         onChange={handleInputChange}
+        onBlur={handleBlur} // Додаємо обробник onBlur
         placeholder={inputValue ? '' : placeholder}
         className={styles['search-input']}
       />

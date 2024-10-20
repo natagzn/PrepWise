@@ -1,0 +1,73 @@
+.foldersWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%; /* Додаємо ширину для вирівнювання */
+}
+
+.filterSortWrapper {
+  display: flex;
+  justify-content: space-between; /* Вирівнюємо по центру */
+  align-items: center; /* Центрує елементи по вертикалі */
+  margin: 0; /* Убираємо маргін */
+  padding: 0; /* Убираємо паддінг */
+  width: 100%; /* Займаємо всю ширину */
+  margin-bottom: 10px;
+}
+
+.leftGroup {
+  display: flex; /* Згрупування Sort і Filter */
+  align-items: center; /* Центрує елементи по вертикалі */
+  justify-content: center; /* Вирівнюємо по центру */
+  gap: 15px; /* Відступ між компонентами */
+}
+
+.sortComponent {
+  width: 250px; /* Фіксована ширина для SortComponent */
+}
+
+.filterComponent {
+  width: 90px; /* Фіксована ширина для FilterCategoryLevel */
+}
+
+/* Новий стиль для компонента пошуку */
+.search {
+  max-width: 500px; /* Максимальна ширина */
+  width: 500px;
+}
+
+.search input {
+  padding: 5px;
+}
+
+.foldersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Медіа запити для адаптивності */
+@media (max-width: 520px) {
+  .filterSortWrapper {
+    flex-direction: column; /* Зміна на вертикальне вирівнювання */
+    align-items: center; /* Центрує елементи по горизонталі */
+    justify-content: center;
+    width: 100%; /* Займає всю ширину */
+    gap: 10px;
+  }
+
+  .leftGroup {
+    justify-content: center; /* Центрує групу Sort і Filter */
+    gap: 10px; /* Зменшуємо відступ між елементами */
+  }
+
+  .search {
+    max-width: 90%; /* Зменшити максимальну ширину на менших екранах */
+    width: 90%;
+  }
+
+  .questionSetsWrapper {
+    align-items: center;
+  }
+}

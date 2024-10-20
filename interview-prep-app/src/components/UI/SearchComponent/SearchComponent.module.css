@@ -38,7 +38,7 @@
 
 @media (max-width: 600px) {
   .search-box {
-    height: 30px; /* Зменшення висоти для мобільних */
+    height: 32px; /* Зменшення висоти для мобільних */
     padding-left: 10px; /* Зменшення відступів для мобільних */
     padding-right: 15px;
   }

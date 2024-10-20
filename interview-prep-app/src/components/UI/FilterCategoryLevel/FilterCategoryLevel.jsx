@@ -1,45 +1,54 @@
 import React, { useState, useEffect } from 'react';
-import styles from './FilterCategoryLevel.module.css'; // Імпортуйте CSS файл для стилізації
+import styles from './FilterCategoryLevel.module.css';
 
-const FilterCategoryLevel = ({
-  categories,
-  levels,
-  onApply,
-  selectedCategories,
-  selectedLevels,
-}) => {
+const FilterCategoryLevel = ({ filters, onApply, selectedFilters }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [localSelectedCategories, setLocalSelectedCategories] = useState([]);
-  const [localSelectedLevels, setLocalSelectedLevels] = useState([]);
+  const [localSelectedFilters, setLocalSelectedFilters] = useState({});
 
-  // Використання useEffect для ініціалізації вибраних категорій та рівнів з пропсів
   useEffect(() => {
-    setLocalSelectedCategories(selectedCategories);
-    setLocalSelectedLevels(selectedLevels);
-  }, [selectedCategories, selectedLevels]); // Викликаємо, коли пропси змінюються
+    const initialFilters = {};
+    filters.forEach((filter) => {
+      initialFilters[filter.name] = Array.isArray(selectedFilters[filter.name])
+        ? selectedFilters[filter.name]
+        : []; // Гарантуємо, що це масив
+    });
+    setLocalSelectedFilters(initialFilters);
+  }, [filters, selectedFilters]);
 
-  const toggleCategory = (category) => {
-    setLocalSelectedCategories((prev) =>
-      prev.includes(category)
-        ? prev.filter((c) => c !== category)
-        : [...prev, category]
-    );
-  };
-
-  const toggleLevel = (level) => {
-    setLocalSelectedLevels((prev) =>
-      prev.includes(level) ? prev.filter((l) => l !== level) : [...prev, level]
-    );
+  const toggleFilter = (filterName, value) => {
+    setLocalSelectedFilters((prev) => {
+      const currentValues = prev[filterName] || []; // Гарантуємо, що це масив
+      return {
+        ...prev,
+        [filterName]: currentValues.includes(value)
+          ? currentValues.filter((v) => v !== value)
+          : [...currentValues, value],
+      };
+    });
   };
 
   const handleApply = () => {
-    onApply(localSelectedCategories, localSelectedLevels);
-    setIsModalOpen(false); // Закриваємо модальне вікно після застосування фільтрів
+    const filtersToApply = {
+      categories: Array.isArray(localSelectedFilters.categories)
+        ? localSelectedFilters.categories
+        : [],
+      levels: Array.isArray(localSelectedFilters.levels)
+        ? localSelectedFilters.levels
+        : [],
+      visibility: Array.isArray(localSelectedFilters.visibility)
+        ? localSelectedFilters.visibility
+        : [],
+    };
+    onApply(filtersToApply);
+    setIsModalOpen(false);
   };
 
   const handleClose = () => {
-    setLocalSelectedCategories(selectedCategories);
-    setLocalSelectedLevels(selectedLevels);
+    const initialFilters = {};
+    filters.forEach((filter) => {
+      initialFilters[filter.name] = selectedFilters[filter.name] || []; // Гарантуємо, що це масив
+    });
+    setLocalSelectedFilters(initialFilters);
     setIsModalOpen(false);
   };
 
@@ -47,41 +56,30 @@ const FilterCategoryLevel = ({
     <div>
       <div className={styles.filterButton} onClick={() => setIsModalOpen(true)}>
         Filter
-        {/* Ваше зображення для фільтра */}
       </div>
 
       {isModalOpen && (
         <div className={styles.modalOverlay}>
           <div className={styles.modalContent}>
             <h2>Filter</h2>
-
-            <div>
-              <h3>Category:</h3>
-              {categories.map((category) => (
-                <div key={category}>
-                  <input
-                    type="checkbox"
-                    checked={localSelectedCategories.includes(category)}
-                    onChange={() => toggleCategory(category)}
-                  />
-                  {category}
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <h3>Level:</h3>
-              {levels.map((level) => (
-                <div key={level}>
-                  <input
-                    type="checkbox"
-                    checked={localSelectedLevels.includes(level)}
-                    onChange={() => toggleLevel(level)}
-                  />
-                  {level}
-                </div>
-              ))}
-            </div>
+            {filters.map((filter) => (
+              <div key={filter.name}>
+                <h3>{filter.label}:</h3>
+                {filter.options.map((option) => (
+                  <div key={option}>
+                    <input
+                      type="checkbox"
+                      checked={
+                        localSelectedFilters[filter.name]?.includes(option) ||
+                        false
+                      }
+                      onChange={() => toggleFilter(filter.name, option)}
+                    />
+                    {option}
+                  </div>
+                ))}
+              </div>
+            ))}
 
             <div className={styles.modalActions}>
               <button onClick={handleApply}>Apply</button>

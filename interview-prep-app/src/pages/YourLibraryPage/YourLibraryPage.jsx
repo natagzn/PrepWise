@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './YourLibraryPage.module.css';
 import QuestionSetsComponent from '../../components/UI/ForLibrary/QuestionSetsLibrary/QuestionSetsLibrary';
-import FoldersComponent from '../../components/UI/ForLibrary/FoldersLibrary/FoldersLibrary';
+import FoldersLibrary from '../../components/UI/ForLibrary/FoldersLibrary/FoldersLibrary';
 import SharedComponent from '../../components/UI/ForLibrary/SharedComponent/SharedLibrary';
 import ResourcesComponent from '../../components/UI/ForLibrary/ResourcesLibrary/ResourcesLibrary';
 import HeaderComponent from '../../components/UI/HeaderComponent/HeaderComponent';
@@ -15,7 +15,7 @@ const YourLibraryPage = () => {
       case 'questionSets':
         return <QuestionSetsComponent />;
       case 'folders':
-        return <FoldersComponent />;
+        return <FoldersLibrary />;
       case 'shared':
         return <SharedComponent />;
       case 'resources':

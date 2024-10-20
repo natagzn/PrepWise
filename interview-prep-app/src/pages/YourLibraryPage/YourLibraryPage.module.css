@@ -4,8 +4,16 @@
 }
 
 .header {
-  font-size: 2rem;
-  margin-bottom: 5px;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+/* Адаптивність для заголовка */
+@media (max-width: 1200px) {
+  .header {
+    font-size: 28px;
+    margin-bottom: 7px;
+  }
 }
 
 .tabs {
@@ -15,12 +23,24 @@
   border-bottom: 2px solid #ddd;
 }
 
+/* Адаптивність для вкладок */
 .tab {
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-size: 23px;
   cursor: pointer;
   position: relative;
   color: #555;
+}
+
+@media (max-width: 768px) {
+  .tab {
+    font-size: 18px; /* Зменшити шрифт для менших екранів */
+    padding: 8px 8px; /* Зменшити відступи */
+  }
+
+  .libraryPage {
+    padding: 10px 20px;
+  }
 }
 
 .tab:hover {
@@ -44,4 +64,24 @@
 
 .tabContent {
   margin-top: 20px;
+}
+
+/* Адаптивність для контенту вкладки */
+@media (max-width: 768px) {
+  .tabContent {
+    padding: 10px;
+  }
+
+  .libraryPage {
+    padding: 10px;
+  }
+
+  .tab {
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 23px;
+    margin-bottom: 5px;
+  }
 }

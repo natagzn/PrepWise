@@ -25,6 +25,11 @@
   justify-content: space-between;
 }
 
+.icon {
+  width: 20px; /* Встановіть бажану ширину іконки */
+  height: 20px; /* Встановіть бажану висоту іконки */
+}
+
 .userInfo {
   display: flex;
   align-items: center;
@@ -164,7 +169,7 @@
 
 @media (max-width: 600px) {
   .wrapper {
-    width: 100%; /* Змінюємо ширину для малих екранів */
+    width: 400px; /* Змінюємо ширину для малих екранів */
     padding: 8px; /* Зменшення відступів */
   }
 
@@ -187,8 +192,9 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .wrapper {
+    width: 340px;
     padding: 5px; /* Додаткове зменшення відступів */
   }
 

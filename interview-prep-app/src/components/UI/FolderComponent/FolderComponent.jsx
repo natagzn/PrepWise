@@ -14,12 +14,12 @@ export const FolderComponent = () => {
           <SaveNot />
         </div>
       </div>
-      <div className={styles.items}>2 items</div>
       <div className={styles.footer}>
-        <div className={styles.userInfo}>
+        {/*<div className={styles.userInfo}>
           <div className={styles.userIcon}></div>
           <div className={styles.username}>sofiyalev06</div>
-        </div>
+        </div>*/}
+        <div className={styles.items}>2 items</div>
         <div className={styles.date}>10.09.2024</div>
       </div>
     </div>

@@ -1,0 +1,64 @@
+.inputContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.inputWrapper {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+}
+
+.forgotPassword {
+  width: 100%;
+  text-align: left;
+  color: #144250;
+  font-size: 18px;
+  font-family: 'Noto Sans';
+  font-weight: 500;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 15px;
+  background: #f4e04d;
+  border-radius: 15px;
+  border: 1px solid rgba(90, 90, 90, 0.5);
+  color: black;
+  font-size: 23px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+  .input {
+    font-size: 16px; /* Зменшуємо шрифт в інпутах */
+  }
+
+  .forgotPassword,
+  .loginButton {
+    font-size: 16px; /* Зменшуємо шрифт для інших текстових елементів */
+  }
+
+  .inputContainer {
+    gap: 7px;
+  }
+}

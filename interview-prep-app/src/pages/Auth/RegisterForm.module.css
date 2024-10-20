@@ -1,0 +1,54 @@
+.inputContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.inputWrapper {
+  width: 85%;
+  border: 1px solid black;
+  border-radius: 15px;
+  min-width: 300px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+}
+
+.registerButton {
+  width: 85%;
+  padding: 15px;
+  background: #f4e04d;
+  border-radius: 15px;
+  border: 1px solid rgba(90, 90, 90, 0.5);
+  color: black;
+  font-size: 23px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  cursor: pointer;
+  min-width: 300px;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+  .input {
+    font-size: 16px; /* Зменшуємо шрифт в інпутах */
+  }
+
+  .registerButton {
+    font-size: 16px; /* Зменшуємо шрифт для кнопки реєстрації */
+  }
+
+  .inputContainer {
+    gap: 7px;
+  }
+}

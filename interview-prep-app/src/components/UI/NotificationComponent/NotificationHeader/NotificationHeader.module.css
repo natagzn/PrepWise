@@ -1,0 +1,73 @@
+/* NotificationHeader.module.css */
+.headerContainer {
+  height: fit-content;
+  display: flex;
+  align-items: center; /* Вирівнювання іконки та тексту по вертикалі */
+  gap: 10px; /* Відступ між іконкою і заголовком */
+  width: 270px;
+  min-width: 270px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: var(--iconColor);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconImage {
+  width: 20px; /* Ширина іконки */
+  height: 20px; /* Висота іконки */
+}
+
+.iconInner {
+  width: 20px;
+  height: 17px;
+  background: black;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  color: black;
+  font-size: 20px;
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  margin-right: 10px; /* Відступ між заголовком і лічильником */
+}
+
+.count {
+  width: 16px;
+  height: 16px;
+  background: #f96f5d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countText {
+  color: white;
+  font-size: 12px;
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 18px; /* Зменшений розмір шрифту для заголовка */
+  }
+
+  .countText {
+    font-size: 10px; /* Зменшений розмір шрифту для лічильника */
+  }
+}

@@ -1,0 +1,165 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  font-family: 'Noto Sans';
+}
+
+.image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover; /* Зберігає пропорції зображення */
+}
+
+.formContainer {
+  width: 50%; /* Залишає 50% ширини для форми */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрує форму вертикально */
+  align-items: center;
+  padding: 20px;
+  gap: 35px;
+}
+
+.loginGap {
+  gap: 35px;
+}
+.registerGap {
+  gap: 25px;
+}
+.logo {
+  text-align: center;
+  color: #204268;
+  font-size: 35px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+}
+
+.welcome {
+  text-align: center;
+  color: black;
+  font-size: 35px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+}
+
+.toggleButton {
+  width: 85%;
+  padding: 15px;
+  background: #f4e04d;
+  border-radius: 15px;
+  border: 1px solid rgba(90, 90, 90, 0.5);
+  color: black;
+  font-size: 18px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.orSeparator {
+  width: 60%;
+  position: relative;
+  margin: 20px 0; /* Відступи зверху і знизу */
+  text-align: center; /* Центруємо текст "or" */
+}
+
+.orLine {
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+  position: absolute; /* Встановлюємо абсолютне позиціонування */
+  top: 50%; /* Вирівнюємо по вертикалі */
+  left: 0;
+}
+
+.orText {
+  position: relative; /* Залишаємо позиціювання відносним для тексту */
+  background: white; /* Задній фон, щоб текст виглядав на лінії */
+  padding: 0 10px; /* Відступи для тексту */
+  color: #5a5a5a; /* Колір тексту */
+  font-size: 20px; /* Розмір шрифту */
+  font-family: 'Noto Sans'; /* Шрифт */
+}
+
+.googleButton {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(90, 90, 90, 0.7);
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.googleIcon {
+  width: 24px; /* Встановіть ширину іконки */
+  height: 24px; /* Встановіть висоту іконки */
+  margin-right: 10px; /* Відступ між іконкою і текстом */
+}
+
+.signupPrompt {
+  width: 60%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.signupLink {
+  color: #144250;
+  font-weight: 600;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 870px) {
+  .logo {
+    font-size: 30px; /* Зменшуємо розмір шрифту для логотипу */
+  }
+
+  .welcome {
+    font-size: 30px; /* Зменшуємо розмір шрифту для привітання */
+  }
+
+  .toggleButton {
+    font-size: 16px; /* Зменшуємо шрифт для кнопки переключення */
+  }
+
+  .orText,
+  .signupPrompt {
+    font-size: 16px; /* Зменшуємо шрифт для інших текстових елементів */
+  }
+
+  .loginGap {
+    gap: 20px;
+  }
+  .registerGap {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container {
+    flex-direction: column; /* Змінюємо напрямок на стовпчик на дуже малих екранах */
+    justify-content: center; /* Центруємо контент вертикально */
+    align-items: center; /* Центруємо контент горизонтально */
+  }
+
+  .image {
+    display: none; /* Ховаємо картинку на дуже малих екранах */
+  }
+
+  .formContainer {
+    width: 100%; /* Задаємо ширину для форми */
+    /* Зменшуємо відстань між елементами форми */
+    padding: 20px; /* Додати відступи, якщо потрібно */
+  }
+
+  .loginGap {
+    gap: 15px;
+  }
+
+  .registerGap {
+    gap: 7px;
+  }
+}

@@ -1,0 +1,64 @@
+.textContainer {
+  display: flex;
+  justify-content: space-between; /* Розподіляє дві групи */
+  align-items: center;
+  width: 100%;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: row; /* Розміщує message і description в рядок за замовчуванням */
+  max-width: 80%; /* Додає обмеження ширини для текстової групи */
+}
+
+.message {
+  font-size: 20px;
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  color: black;
+  margin-right: 10px; /* Відступ між message і description */
+}
+
+.description {
+  font-size: 20px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  color: #5a5a5a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Обрізає текст, якщо він не вміщається */
+}
+
+.date {
+  font-size: 18px;
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  color: #5a5a5a;
+  white-space: nowrap;
+  right: 10; /* Відступ для відокремлення дати */
+}
+
+@media (max-width: 768px) {
+  .textGroup {
+    flex-direction: column; /* Змінює напрямок на колонку при зменшенні ширини */
+  }
+}
+
+/* Медіазапит для зменшення шрифта */
+@media (max-width: 768px) {
+  .textGroup {
+    flex-direction: column; /* Змінює напрямок на колонку при зменшенні ширини */
+  }
+
+  .message {
+    font-size: 18px; /* Зменшений розмір шрифту для message */
+  }
+
+  .description {
+    font-size: 18px; /* Зменшений розмір шрифту для description */
+  }
+
+  .date {
+    font-size: 16px; /* Зменшений розмір шрифту для дати */
+  }
+}

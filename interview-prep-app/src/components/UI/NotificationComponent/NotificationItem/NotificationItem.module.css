@@ -1,0 +1,27 @@
+.notificationItem {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-direction: row; /* За замовчуванням всі елементи йдуть в один рядок */
+}
+
+.notificationHeader {
+  flex-shrink: 0; /* Заголовок залишиться на місці */
+}
+
+.notificationText {
+  flex-grow: 1; /* Текст розтягується на всю доступну ширину */
+}
+
+@media (max-width: 768px) {
+  /* Для екранів менших за 768px */
+  .notificationItem {
+    flex-direction: column; /* Елементи переходять в колонку */
+    padding: 15px;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}

@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './ResourceComponent.module.css';
 import LikeDislikeToggle from '../LikeDislike/LikeDislikeToggle';
 
+import ReportIcon from './report.svg'; // Змініть на свій шлях до іконки
+
 function ResourceComponent() {
   return (
     <div className={styles.wrapper}>
@@ -11,6 +13,7 @@ function ResourceComponent() {
             <div className={styles.userIcon}></div>
             <div className={styles.username}>sofiyalev06</div>
           </div>
+          <img src={ReportIcon} alt="report" className={styles.icon} />
         </div>
         <div className={styles.category}>
           <div className={styles.categoryText}>Without category</div>

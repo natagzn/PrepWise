@@ -1,0 +1,47 @@
+.libraryPage {
+  padding: 10px 40px;
+  align-self: center;
+}
+
+.header {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  color: #555;
+}
+
+.tab:hover {
+  color: #000;
+}
+
+.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+}
+
+.tabContent {
+  margin-top: 20px;
+}

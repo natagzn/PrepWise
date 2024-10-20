@@ -1,4 +1,31 @@
 {
-  "welcome": "Welcome to the Interview Prep App",
-  "description": "Prepare for your next interview with confidence."
+  "people": "People",
+  "favorite": "Favorite",
+  "home": "Home",
+  "logout": "Log out",
+  "feedback": "Help and feedback",
+  "library": "Library",
+  "notifications": "Notifications",
+  "achievements": "Achievments",
+  "settings": "Settings",
+
+  "welcome_back": "Welcome back!",
+  "sign_up": "Sign up!",
+  "or": "or",
+  "continue_with_google": "Continue with Google",
+  "no_account": "Don't have an account? ",
+  "already_have_account": "Already have an account? ",
+  "log_in": "Log In",
+  "sign_up": "Sign Up",
+
+  "email_or_username": "Email/Username",
+  "password": "Password",
+  "forgot_password": "Forgot password?",
+  "log_in": "Log in",
+
+  "username": "Username",
+  "email": "Email",
+  "password": "Password",
+  "confirm_password": "Confirm Password",
+  "sign_up": "Sign up"
 }

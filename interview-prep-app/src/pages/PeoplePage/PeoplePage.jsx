@@ -3,34 +3,36 @@ import styles from './PeoplePage.module.css';
 import FollowingComponent from '../../components/UI/ForPeoplePage/FollowingComponent';
 import FollowersComponent from '../../components/UI/ForPeoplePage/FollowersComponent';
 import FriendsComponent from '../../components/UI/ForPeoplePage/FriendsComponent';
+import { useTranslation } from 'react-i18next'; // Імпортуємо useTranslation
 
 const PeoplePage = ({ username, onClose }) => {
+  const { t } = useTranslation(); // Отримуємо функцію t для перекладів
   const [activeTab, setActiveTab] = useState('following');
 
   // Списки користувачів для кожної вкладки
   const followingList = [
-    { username: 'sofiyalev06', text: 'Following' },
-    { username: 'annanahalka', text: 'Following' },
-    { username: 'annanahalka', text: 'Friends' },
-    { username: 'natagzn1', text: 'Friends' },
-    { username: 'natagzn3', text: 'Friends' },
-    { username: 'natagzn4', text: 'Friends' },
+    { username: 'sofiyalev06', text: t('following') },
+    { username: 'annanahalka', text: t('following') },
+    { username: 'annanahalka', text: t('friends') },
+    { username: 'natagzn1', text: t('friends') },
+    { username: 'natagzn3', text: t('friends') },
+    { username: 'natagzn4', text: t('friends') },
   ];
 
   const followersList = [
-    { username: 'user1', text: 'Followers' },
-    { username: 'user2', text: 'Followers' },
-    { username: 'annanahalka', text: 'Friends' },
-    { username: 'natagzn1', text: 'Friends' },
-    { username: 'natagzn3', text: 'Friends' },
-    { username: 'natagzn4', text: 'Friends' },
+    { username: 'user1', text: t('followers') },
+    { username: 'user2', text: t('followers') },
+    { username: 'annanahalka', text: t('friends') },
+    { username: 'natagzn1', text: t('friends') },
+    { username: 'natagzn3', text: t('friends') },
+    { username: 'natagzn4', text: t('friends') },
   ];
 
   const friendsList = [
-    { username: 'annanahalka', text: 'Friends' },
-    { username: 'natagzn1', text: 'Friends' },
-    { username: 'natagzn3', text: 'Friends' },
-    { username: 'natagzn4', text: 'Friends' },
+    { username: 'annanahalka', text: t('friends') },
+    { username: 'natagzn1', text: t('friends') },
+    { username: 'natagzn3', text: t('friends') },
+    { username: 'natagzn4', text: t('friends') },
   ];
 
   // Функція для рендерингу компонентів залежно від активної вкладки
@@ -62,19 +64,19 @@ const PeoplePage = ({ username, onClose }) => {
             className={`${styles.tab} ${activeTab === 'following' ? styles.active : ''}`}
             onClick={() => setActiveTab('following')}
           >
-            Following ({followingList.length}) {/* Додаємо кількість */}
+            {t('following')} ({followingList.length}) {/* Додаємо кількість */}
           </div>
           <div
             className={`${styles.tab} ${activeTab === 'followers' ? styles.active : ''}`}
             onClick={() => setActiveTab('followers')}
           >
-            Followers ({followersList.length}) {/* Додаємо кількість */}
+            {t('followers')} ({followersList.length}) {/* Додаємо кількість */}
           </div>
           <div
             className={`${styles.tab} ${activeTab === 'friends' ? styles.active : ''}`}
             onClick={() => setActiveTab('friends')}
           >
-            Friends ({friendsList.length}) {/* Додаємо кількість */}
+            {t('friends')} ({friendsList.length}) {/* Додаємо кількість */}
           </div>
         </div>
 

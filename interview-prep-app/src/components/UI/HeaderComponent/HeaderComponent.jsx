@@ -4,8 +4,10 @@ import styles from './HeaderComponent.module.css'; // Підключення CSS
 import AvatarMenu from '../AvatarMenu/AvatarMenu';
 import SearchComponent from '../SearchComponent/SearchComponent';
 import PeoplePage from '../../../pages/PeoplePage/PeoplePage';
+import { useTranslation } from 'react-i18next'; // Імпортуємо useTranslation
 
 const HeaderComponent = ({ showSearch, showPlus, showPremium }) => {
+  const { t } = useTranslation(); // Отримуємо функцію t для перекладів
   const [isPeoplePageOpen, setIsPeoplePageOpen] = useState(false);
 
   const openPeoplePage = () => {
@@ -25,13 +27,15 @@ const HeaderComponent = ({ showSearch, showPlus, showPremium }) => {
       <div className={styles['right-group']}>
         {showSearch && (
           <div className={styles['search']}>
-            <SearchComponent placeholder={'Enter your request'} />
+            <SearchComponent placeholder={t('enter_your_request')} />{' '}
+            {/* Переклад для placeholder, якщо потрібно */}
           </div>
         )}
 
         {showPremium && (
           <div className={styles['premium-box']}>
-            <div className={styles['premium-text']}>Free 7-day trial</div>
+            <div className={styles['premium-text']}>{t('free_trial')}</div>{' '}
+            {/* Використовуємо переклад */}
           </div>
         )}
 

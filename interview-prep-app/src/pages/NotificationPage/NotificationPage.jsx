@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/UI/HeaderComponent/HeaderComponent
 import NotificationItem from '../../components/UI/NotificationComponent/NotificationItem/NotificationItem';
 import NotificationsList from '../../components/UI/NotificationComponent/NotificationList/NotificationList';
 
+// доробити мови потім
 const NotificationPage = () => {
   const notifications = [
     {

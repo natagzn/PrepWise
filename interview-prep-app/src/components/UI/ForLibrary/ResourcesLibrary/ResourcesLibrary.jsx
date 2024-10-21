@@ -4,17 +4,19 @@ import ResourceComponent from '../../ResourceComponent/ResourceComponent';
 import SortComponent from '../../SortComponent/SortComponent';
 import FilterCategoryLevel from '../../FilterCategoryLevel/FilterCategoryLevel';
 import SearchComponent from '../../SearchComponent/SearchComponent';
+import { useTranslation } from 'react-i18next'; // Імпортуємо useTranslation
 
 const ResourcesLibrary = () => {
+  const { t } = useTranslation(); // Отримуємо функцію t для перекладів
   const [resources, setResources] = useState([]);
   const [selectedSortingOption, setSelectedSortingOption] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   const sortingOptions = [
-    { label: 'Created (new -> old)', value: 'createdDesc' },
-    { label: 'Created (old -> new)', value: 'createdAsc' },
-    { label: 'Name (A -> Z)', value: 'nameAsc' },
-    { label: 'Name (Z -> A)', value: 'nameDesc' },
+    { label: t('created_new_old'), value: 'createdDesc' }, // Переклад
+    { label: t('created_old_new'), value: 'createdAsc' }, // Переклад
+    { label: t('name_A_Z'), value: 'nameAsc' }, // Переклад
+    { label: t('name_Z_A'), value: 'nameDesc' }, // Переклад
   ];
 
   const handleSortChange = (value) => {
@@ -132,7 +134,7 @@ const ResourcesLibrary = () => {
         </div>
         <div className={styles.search}>
           <SearchComponent
-            placeholder="Search your resources"
+            placeholder={t('search_resources')} // Переклад
             onClick={handleSearchClick}
           />
         </div>

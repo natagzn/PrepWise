@@ -12,8 +12,8 @@ i18n
   .use(initReactI18next) // підключення i18next до React
   .init({
     resources,
-    lng: 'en', // мова за замовчуванням
-    fallbackLng: 'en', // якщо немає перекладу для обраної мови
+    lng: 'ua', // мова за замовчуванням
+    fallbackLng: 'ua', // якщо немає перекладу для обраної мови
     interpolation: {
       escapeValue: false, // потрібно для React
     },

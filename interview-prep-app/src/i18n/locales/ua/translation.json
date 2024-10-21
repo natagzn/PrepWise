@@ -27,5 +27,43 @@
   "email": "Електронна пошта",
   "password": "Пароль",
   "confirm_password": "Підтвердьте пароль",
-  "sign_up": "Зареєструватися"
+  "sign_up": "Зареєструватися",
+
+  "enter_your_request": "Введіть свій запит",
+  "recommended_from_your_following": "Рекомендовані з ваших підписок",
+  "question_sets": "Набори запитань",
+  "resources": "Ресурси",
+
+  "following": "Підписки",
+  "followers": "Підписники",
+  "friends": "Друзі",
+
+  "your_library": "Ваша бібліотека",
+  "folders": "Папки",
+  "shared": "Спільні",
+
+  "category": "Категорія",
+  "article_book": "Стаття/Книга",
+  "description": "Опис",
+  "report": "Поскаржитися",
+  "options": "Опції",
+  "without_category": "Без категорії",
+
+  "level": "Рівень",
+  "questions": "запитань",
+  "categories": "Категорії",
+  "public": "Public",
+  "private": "Private",
+  "not_specified": "Не вказано",
+
+  "free_trial": "Пробний період",
+
+  "search_user": "Пошук користувача",
+  "no_users_found": "Користувачів не знайдено",
+
+  "created_new_old": "Створено (нові -> старі)",
+  "created_old_new": "Створено (старі -> нові)",
+  "name_A_Z": "Назва (А -> Я)",
+  "name_Z_A": "Назва (Я -> А)",
+  "search_resources": "Пошук ваших ресурсів"
 }

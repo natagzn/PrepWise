@@ -4,8 +4,12 @@ import HeaderComponent from '../../components/UI/HeaderComponent/HeaderComponent
 import SearchComponent from '../../components/UI/SearchComponent/SearchComponent';
 import QuestionSetComponent from '../../components/UI/QuestionSetComponent/QuestionSetComponent';
 import ResourceComponent from '../../components/UI/ResourceComponent/ResourceComponent';
+import { useTranslation } from 'react-i18next'; // Імпортуємо useTranslation
 
 const MainPage = () => {
+  const { t } = useTranslation(); // Отримуємо функцію t для перекладів
+
+  // Залишаємо питання і ресурси без змін
   const questionSets = Array.from({ length: 6 }, (_, index) => ({
     id: index,
     questionsCount: 10,
@@ -45,11 +49,11 @@ const MainPage = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 900) {
-        setVisibleItems(1); // Відображення 1 елементу при ширині < 900px
+        setVisibleItems(1);
       } else if (window.innerWidth < 1310) {
-        setVisibleItems(2); // Відображення 2 елементів при ширині < 1310px
+        setVisibleItems(2);
       } else {
-        setVisibleItems(3); // Відображення 3 елементів на більших екранах
+        setVisibleItems(3);
       }
     };
 
@@ -89,15 +93,17 @@ const MainPage = () => {
     <div className={styles.mainPage}>
       <HeaderComponent showSearch={true} showPremium={true} />
       <div className={styles.search}>
-        <SearchComponent placeholder={'Enter your request'} />
+        <SearchComponent placeholder={t('enter_your_request')} />{' '}
+        {/* Перекладено placeholder */}
       </div>
 
       <h2 className={styles.recommendationTitle}>
-        Recommended from your following
+        {t('recommended_from_your_following')} {/* Перекладено заголовок */}
       </h2>
 
       <div className={styles.questionSets}>
-        <h2 className={styles.title}>Question sets</h2>
+        <h2 className={styles.title}>{t('question_sets')}</h2>{' '}
+        {/* Перекладено заголовок секції */}
         <div className={styles.carousel}>
           <button
             onClick={handleQuestionScrollLeft}
@@ -141,7 +147,8 @@ const MainPage = () => {
       </div>
 
       <div className={styles.resources}>
-        <h2 className={styles.title}>Resources</h2>
+        <h2 className={styles.title}>{t('resources')}</h2>{' '}
+        {/* Перекладено заголовок секції */}
         <div className={styles.carousel}>
           <button
             onClick={handleResourceScrollLeft}

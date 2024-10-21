@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .filterSortWrapper {
@@ -60,11 +61,6 @@
   .questionSetsWrapper {
     align-items: center;
   }
-}
-
-.appliedFiltersWrapper {
-  margin: 10px 0; /* Відступ для блоку з інформацією про застосовані фільтри */
-  font-weight: bold; /* Виділити текст */
 }
 
 .questionSetsGrid {

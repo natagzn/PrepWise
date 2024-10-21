@@ -17,6 +17,9 @@ import { Route, Routes } from 'react-router-dom';
 import YourLibraryPage from './pages/YourLibraryPage/YourLibraryPage';
 import NotificationPage from './pages/NotificationPage/NotificationPage';
 
+import PeopleComponent from './components/UI/PeopleComponent/PeopleComponent';
+import PeoplePage from './pages/PeoplePage/PeoplePage';
+
 function App() {
   const { t, i18n } = useTranslation();
 
@@ -36,6 +39,7 @@ function App() {
       <Route path="/home" element={<MainPage />} />
       <Route path="/library" element={<YourLibraryPage />} />
       <Route path="/notifications" element={<NotificationPage />} />
+      <Route path="/people" element={<PeoplePage />} />
       {/* Додай інші сторінки за потреби */}
     </Routes>
   );

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom'; // Підключаємо ReactDOM для створення порталу
 import styles from './HeaderComponent.module.css'; // Підключення CSS файлу
 import AvatarMenu from '../AvatarMenu/AvatarMenu';
 import SearchComponent from '../SearchComponent/SearchComponent';
+import PeoplePage from '../../../pages/PeoplePage/PeoplePage';
 
 const HeaderComponent = ({ showSearch, showPlus, showPremium }) => {
+  const [isPeoplePageOpen, setIsPeoplePageOpen] = useState(false);
+
+  const openPeoplePage = () => {
+    setIsPeoplePageOpen(true); // Відкриваємо PeoplePage
+  };
+
+  const closePeoplePage = () => {
+    setIsPeoplePageOpen(false); // Закриваємо PeoplePage
+  };
+
   return (
     <div className={styles.header}>
       <div className={styles['left-group']}>
@@ -30,9 +42,20 @@ const HeaderComponent = ({ showSearch, showPlus, showPremium }) => {
         )}
 
         <div className={styles.avatar}>
-          <AvatarMenu />
+          <AvatarMenu onOpenPeoplePage={openPeoplePage} />
         </div>
       </div>
+
+      {/* Використовуємо портал для рендерингу модального вікна за межами HeaderComponent */}
+      {isPeoplePageOpen &&
+        ReactDOM.createPortal(
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+              <PeoplePage username="sofiyalev06" onClose={closePeoplePage} />
+            </div>
+          </div>,
+          document.body // рендеримо модальне вікно в body, щоб воно було поверх всього
+        )}
     </div>
   );
 };

@@ -14,7 +14,7 @@ const MainPage = () => {
     date: '2024-10-19',
     level: 'Easy',
     isLiked: index % 2 === 0,
-    visibility: 'public',
+    visibility: 'Public',
     title: 'Name of set ' + index,
   }));
 

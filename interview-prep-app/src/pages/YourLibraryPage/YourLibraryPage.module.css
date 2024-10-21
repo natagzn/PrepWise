@@ -64,6 +64,9 @@
 
 .tabContent {
   margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Адаптивність для контенту вкладки */

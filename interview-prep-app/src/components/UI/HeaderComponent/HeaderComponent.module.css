@@ -53,6 +53,31 @@
   border: 1px black solid;
 }
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* затемнення фону */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Відключаємо прокрутку */
+}
+
+.modalContent {
+  width: 100vw; /* Ширина на весь екран */
+  height: 100vh; /* Висота на весь екран */
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden; /* Прибираємо вертикальну прокрутку */
+  border: none; /* Прибираємо рамки */
+  box-shadow: none; /* Прибираємо тінь */
+  border-radius: 0; /* Прибираємо закруглення */
+}
+
 /* Адаптивні стилі для різних розмірів екранів */
 @media (max-width: 1200px) {
   .logo {

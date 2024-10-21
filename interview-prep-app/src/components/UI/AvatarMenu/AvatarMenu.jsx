@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './AvatarMenu.module.css';
-import { useLanguage } from '../../../context/LanguageContext'; // Імпортуємо контекст мови
+import { useLanguage } from '../../../context/LanguageContext';
 import { Link, useNavigate } from 'react-router-dom';
 
 const menuIcons = {
@@ -14,35 +14,33 @@ const menuIcons = {
 };
 
 const menuLinks = {
-  home: '/home', // Головна сторінка
-  favorite: '/favorite', // Сторінка з улюбленим
-  settings: '/settings', // Сторінка налаштувань
-  people: '/people', // Інші сторінки
+  home: '/home',
+  favorite: '/favorite',
+  settings: '/settings',
   library: '/library',
   notifications: '/notifications',
   achievements: '/achievements',
 };
 
-const AvatarMenu = () => {
-  const { translations } = useLanguage(); // Отримуємо локалізовані значення
+const AvatarMenu = ({ onOpenPeoplePage }) => {
+  // Приймаємо функцію з HeaderComponent
+  const { translations } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null); // Додаємо реф для меню
+  const menuRef = useRef(null);
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Логіка виходу
-    navigate('/login'); // Програмно переміщуємо користувача на сторінку входу
+    navigate('/login');
   };
 
   const toggleMenu = () => {
-    setIsOpen((prev) => !prev); // Перемикаємо стан меню
+    setIsOpen((prev) => !prev);
   };
 
-  // Функція для закриття меню
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsOpen(false); // Закриваємо меню при натисканні за його межами
+      setIsOpen(false);
     }
   };
 
@@ -76,29 +74,35 @@ const AvatarMenu = () => {
               </div>
             </div>
             <div className={styles.separator} />
-            {Object.entries(menuIcons).map(([key, src]) => (
-              <Link to={menuLinks[key]} key={key} className={styles.menuItem}>
-                <img
-                  className={`${styles.menuIcon} ${
-                    key === 'home' ? styles.homeIcon : ''
-                  }`}
-                  src={src}
-                  alt={key}
-                />
-                {translations[key] ||
-                  key.charAt(0).toUpperCase() + key.slice(1)}
-              </Link>
-            ))}
+            {Object.entries(menuIcons).map(([key, src]) =>
+              key === 'people' ? (
+                <div
+                  key={key}
+                  className={styles.menuItem}
+                  onClick={onOpenPeoplePage}
+                >
+                  {/* Викликаємо функцію відкриття модального вікна */}
+                  <img className={styles.menuIcon} src={src} alt={key} />
+                  {translations[key] ||
+                    key.charAt(0).toUpperCase() + key.slice(1)}
+                </div>
+              ) : (
+                <Link to={menuLinks[key]} key={key} className={styles.menuItem}>
+                  <img className={styles.menuIcon} src={src} alt={key} />
+                  {translations[key] ||
+                    key.charAt(0).toUpperCase() + key.slice(1)}
+                </Link>
+              )
+            )}
             <div className={styles.separator} />
             <div
               className={`${styles.menuItem} ${styles.logoutItem}`}
-              onClick={handleLogout} // Викликаємо handleLogout при кліку
+              onClick={handleLogout}
             >
               {translations.logout || 'Log out'}
             </div>
             <div className={`${styles.menuItem} ${styles.feedbackItem}`}>
-              {translations.feedback || 'Help and feedback'}{' '}
-              {/* Локалізація для допомоги */}
+              {translations.feedback || 'Help and feedback'}
             </div>
           </div>
         </div>

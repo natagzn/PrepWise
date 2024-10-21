@@ -66,6 +66,13 @@
     <string name="question">Question</string>
     <string name="answer">Answer</string>
 
+    <string name="new_question_set">New question set</string>
+    <string name="new_resource">New resource</string>
+    <string name="name_article_book">Name article/book</string>
+    <string name="question_set">Question set</string>
+    <string name="folder">Folder</string>
+    <string name="resource">Resource</string>
+
     <string name="choose_language">Choose language</string>
 
     <string name="already_have_an_account">Already have an account? </string>
@@ -98,6 +105,8 @@
     <string name="following">Following</string>
     <string name="followers">Followers</string>
     <string name="friends">Friends</string>
+    <string name="accept">Accept</string>
+    <string name="follow_back">Follow back</string>
 
     <string name="private_str">private</string>
     <string name="public_str">public</string>

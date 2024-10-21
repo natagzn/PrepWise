@@ -10,11 +10,14 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.prepwise.LocaleHelper.loadLocale
 import com.example.prepwise.R
+import com.example.prepwise.fragments.AddDialogFragment
 import com.example.prepwise.fragments.HomeFragment
 import com.example.prepwise.fragments.LibraryFragment
 import com.example.prepwise.fragments.LikedFragment
+import com.example.prepwise.fragments.NewFollowersFragment
 import com.example.prepwise.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,30 +35,49 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.visibility = View.VISIBLE
 
-        if(savedInstanceState==null){
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFragment()).commit()
-        }
+//        if(savedInstanceState==null){
+//            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFragment()).commit()
+//        }
 
+        // Перенаправленнян на фрагмент
+        val fragmentToOpen = intent.getStringExtra("openFragment")
+        if (fragmentToOpen == "ProfileFragment") replaceFragment(ProfileFragment())
+        else if (fragmentToOpen == "LibratyFragment") replaceFragment(LibraryFragment())
+        else if (fragmentToOpen == "LikedFragment") replaceFragment(LikedFragment())
+        else replaceFragment(HomeFragment())
+
+        // Клік на меню навігації
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_home -> {
+                    intent.putExtra("openFragment", "HomeFragment")
                     replaceFragment(HomeFragment())
                     true
                 }
                 R.id.bottom_liked -> {
+                    intent.putExtra("openFragment", "LikedFragment")
                     replaceFragment(LikedFragment())
                     true
                 }
                 R.id.bottom_library -> {
+                    intent.putExtra("openFragment", "LibraryFragment")
                     replaceFragment(LibraryFragment())
                     true
                 }
                 R.id.bottom_profile -> {
+                    intent.putExtra("openFragment", "ProfileFragment")
                     replaceFragment(ProfileFragment())
                     true
                 }
                 else -> false
             }
+        }
+
+        // Відриття меню для додавання
+        val addBtn: FloatingActionButton = findViewById(R.id.add_btn)
+        addBtn.setOnClickListener{
+            val dialogFragment = AddDialogFragment()
+            dialogFragment.show(supportFragmentManager, "CustomDialog")
         }
     }
 

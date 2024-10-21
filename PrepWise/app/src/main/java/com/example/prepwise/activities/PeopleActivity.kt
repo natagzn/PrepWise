@@ -45,8 +45,9 @@ class PeopleActivity : AppCompatActivity() {
 
         // Закриття сторінки
         val close: ImageView = findViewById(R.id.close)
-        close.setOnClickListener{
+        close.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("openFragment", "ProfileFragment")  // Передаємо інформацію про фрагмент
             startActivity(intent)
             finish()
         }

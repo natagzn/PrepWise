@@ -50,11 +50,11 @@
                 android:paddingVertical="5dp"
                 android:text="@string/free_trial"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintEnd_toStartOf="@+id/go_to_notify"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/go_to_notify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // Імпортуємо motion для анімацій
 import styles from './PasswordReset.module.css';
 import { useTranslation } from 'react-i18next';
+import AuthTemplate from '../../../components/layout/AuthTemplate/AuthTemplate';
+import { useNavigate } from 'react-router-dom';
 
-const PasswordReset = ({ onCancel, onConfirm }) => {
-  // Додаємо onCancel як пропс
-  const { t } = useTranslation(); // Отримуємо функцію t для перекладу
+const PasswordReset = () => {
+  const { t } = useTranslation();
+  const [isLogin] = useState(false);
+  const navigate = useNavigate();
 
   // Налаштовуємо анімаційні параметри
   const inputVariants = {
@@ -13,49 +16,64 @@ const PasswordReset = ({ onCancel, onConfirm }) => {
     visible: { opacity: 1, y: 0 }, // Кінцевий стан (видимий)
   };
 
+  const hadleConfirm = () => {
+    console.log('good');
+    if (true) {
+      navigate('/newpassword');
+    }
+  };
+
+  const handleCancel = () => {
+    navigate('/login');
+  };
+
   return (
-    <div className={styles.formContainer}>
-      <div className={styles.title}>{t('reset_password')}</div>
+    <AuthTemplate isLogin={true}>
+      {/* Основний контент форми */}
+      <div className={styles.formContainer}>
+        <div className={styles.title}>{t('reset_password')}</div>
 
-      {/* Анімований інпут */}
-      <motion.div
-        className={styles.inputWrapper}
-        initial="hidden"
-        animate="visible"
-        variants={inputVariants}
-        transition={{ duration: 0.5 }}
-      >
-        <input
-          type="email"
-          placeholder={t('email')} // Використовуємо t для перекладу
-          className={styles.input}
-        />
-      </motion.div>
+        {/* Анімований інпут для email */}
+        <motion.div
+          className={styles.inputWrapper}
+          initial="hidden"
+          animate="visible"
+          variants={inputVariants}
+          transition={{ duration: 0.5 }}
+        >
+          <input
+            type="email"
+            placeholder={t('email')} // Використовуємо t для перекладу
+            className={styles.input}
+            required
+          />
+        </motion.div>
 
-      {/* Анімована кнопка підтвердження */}
-      <motion.button
-        className={styles.confirmButton}
-        initial="hidden"
-        animate="visible"
-        variants={inputVariants}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        onClick={onConfirm}
-      >
-        {t('email_confirmation')}
-      </motion.button>
+        {/* Анімована кнопка підтвердження */}
+        <motion.button
+          className={styles.confirmButton}
+          initial="hidden"
+          animate="visible"
+          variants={inputVariants}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          onClick={hadleConfirm}
+        >
+          {t('email_confirmation')}
+        </motion.button>
 
-      {/* Кнопка "Cancel", яка викликає функцію onCancel */}
-      <motion.button
-        className={styles.cancelButton}
-        initial="hidden"
-        animate="visible"
-        variants={inputVariants}
-        transition={{ duration: 0.5, delay: 1 }} // Затримка для кнопки
-        onClick={onCancel} // Виклик функції для повернення до LoginForm
-      >
-        {t('cancel')}
-      </motion.button>
-    </div>
+        {/* Кнопка "Cancel", яка викликає функцію onCancel */}
+        <motion.button
+          className={styles.cancelButton}
+          initial="hidden"
+          animate="visible"
+          variants={inputVariants}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          onClick={handleCancel}
+        >
+          {t('cancel')}
+        </motion.button>
+      </div>
+    </AuthTemplate>
   );
 };
 

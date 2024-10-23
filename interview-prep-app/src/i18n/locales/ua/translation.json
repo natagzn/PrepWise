@@ -2,7 +2,7 @@
   "people": "Люди",
   "favorite": "Улюблене",
   "home": "Головна",
-  "logout": "Вихід",
+  "logout": "Вихід з акаунту",
   "feedback": "Допомога та відгуки",
   "library": "Бібліотека",
   "notifications": "Сповіщення",
@@ -76,5 +76,23 @@
   "reset_password": "Введіть пошту для скидання паролю",
   "email_confirmation": "Підтвердити пошту",
   "new_password": "Новий пароль",
-  "enter_new_password": "Введіть новйий пароль"
+  "enter_new_password": "Введіть новий пароль",
+  "password_confirmation": "Підтвердження паролю",
+
+  "confirm": "Підтвердити",
+  "passwords_do_not_match": "Паролі не співпадають",
+
+  "confirm_email": "Підтвердження пошти",
+  "enter_code": "Введіть код, який ви отримали на пошту",
+
+  "personal_information": "Інформація про користувача",
+  "avatar": "Зображення",
+  "location": "Локація",
+  "language": "Мова",
+
+  "delete_akk": "Видалити акаунт",
+  "delete_desc": "Цю дію неможливо відмінити. Це видалить всі дані.",
+
+  "edit_information": "Редагування інфорамції",
+  "save": "Зберегти"
 }

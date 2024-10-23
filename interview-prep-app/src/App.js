@@ -19,6 +19,11 @@ import NotificationPage from './pages/NotificationPage/NotificationPage';
 import PeopleComponent from './components/UI/PeopleComponent/PeopleComponent';
 import PeoplePage from './pages/PeoplePage/PeoplePage';
 import SettingsPage from './pages/SettingsPage/SettingsPage';
+import LoginForm from './pages/Auth/LoginForm/LoginForm';
+import RegisterForm from './pages/Auth/RegisterForm/RegisterForm';
+import NewPassword from './pages/Auth/NewPassword/NewPassword';
+import PasswordReset from './pages/Auth/PasswordReset/PasswordReset';
+import ConfirmEmail from './pages/Auth/ConfirmEmail/ConfirmEmail';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -33,9 +38,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<AuthPage />} />
-      <Route path="/login" element={<AuthPage />} />
-      <Route path="/home" element={<MainPage />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/register" element={<RegisterForm />} />
+      <Route path="/confirmEmail" element={<ConfirmEmail />} />
+
+      <Route path="/passwordreset" element={<PasswordReset />} />
+      <Route path="/newpassword" element={<NewPassword />} />
+
       <Route path="/home" element={<MainPage />} />
       <Route path="/library" element={<YourLibraryPage />} />
       <Route path="/notifications" element={<NotificationPage />} />

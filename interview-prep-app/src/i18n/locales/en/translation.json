@@ -76,5 +76,23 @@
   "reset_password": "Enter the email to reset your password",
   "email_confirmation": "Confirm email",
   "new_password": "New password",
-  "enter_new_password": "Enter new password"
+  "enter_new_password": "Enter new password",
+  "password_confirmation": "Password conformation",
+
+  "confirm": "Confirm",
+  "passwords_do_not_match": "Password do not match",
+
+  "confirm_email": "Confirm email",
+  "enter_code": "Enter the code you received by email",
+
+  "personal_information": "Personal information",
+  "avatar": "Profile picture",
+  "location": "Location",
+  "language": "Language",
+
+  "delete_akk": "Delete account",
+  "delete_desc": "This will delete all your data and cannot be undone",
+
+  "edit_information": "Edit information",
+  "save": "Save"
 }

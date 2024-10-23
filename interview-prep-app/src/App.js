@@ -24,6 +24,7 @@ import RegisterForm from './pages/Auth/RegisterForm/RegisterForm';
 import NewPassword from './pages/Auth/NewPassword/NewPassword';
 import PasswordReset from './pages/Auth/PasswordReset/PasswordReset';
 import ConfirmEmail from './pages/Auth/ConfirmEmail/ConfirmEmail';
+import BuyPremium from './pages/BuyPremium/BuyPremium';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -50,6 +51,8 @@ function App() {
       <Route path="/notifications" element={<NotificationPage />} />
       <Route path="/people" element={<PeoplePage />} />
       <Route path="/settings" element={<SettingsPage />} />
+
+      <Route path="/buyPremium" element={<BuyPremium />} />
       {/* Додай інші сторінки за потреби */}
     </Routes>
   );

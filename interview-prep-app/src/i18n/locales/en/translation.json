@@ -94,5 +94,21 @@
   "delete_desc": "This will delete all your data and cannot be undone",
 
   "edit_information": "Edit information",
-  "save": "Save"
+  "save": "Save",
+
+  "buy_premium": "Buy Premium",
+  "you_will_receive": "You will receive",
+  "unlimited_search_results": "unlimited search results",
+  "unlimited_sets": "unlimited sets",
+  "unlimited_questions": "unlimited number of questions in the set",
+  "share_access": "the ability to share access to the set",
+  "monthly": "Monthly",
+  "annual": "Annual",
+  "amount_billed_today": "Amount billed today",
+  "billed_annually": "Billed annually at US$11.99, that’s like",
+  "that_is": "that’s like",
+  "month": "month",
+  "get_prepwise_premium": "Get PrepWise Premium",
+  "start_with_trial": "Start with a 7-day free trial",
+  "start_free_trial": "Start your free trial"
 }

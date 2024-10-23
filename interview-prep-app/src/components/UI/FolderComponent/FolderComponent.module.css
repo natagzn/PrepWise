@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin: 10px;
+  font-family: var(--web-font-family);
 }
 
 .header {
@@ -22,27 +23,26 @@
 
 .iconContainer {
   display: flex;
-  align-items: center; /* Вирівнює іконку та текст по вертикалі */
+  align-items: center;
 }
 
 .icon {
-  width: 35.64px; /* Ширина контейнера */
-  height: 23px; /* Висота контейнера */
-  background-image: url('./Vector.svg'); /* Путь до зображення */
-  background-size: contain; /* Заповнення простору, зберігаючи пропорції */
-  background-repeat: no-repeat; /* Не повторювати зображення */
-  background-position: center; /* Вирівнювання зображення по центру контейнера */
-  margin-right: 10px; /* Відступ між іконкою та назвою папки */
+  width: 35.64px;
+  height: 23px;
+  background-image: url('./Vector.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
 }
 
 .folderName {
   color: black;
-  font-size: 23px;
-  font-family: 'Noto Sans', sans-serif;
+  font-size: var(--web-23-regular-font-size);
   font-weight: 700;
-  white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
-  overflow: hidden; /* Сховати текст, якщо він не поміщається */
-  text-overflow: ellipsis; /* Додає три крапки, якщо текст не вміщається */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .savedIcon {
@@ -52,10 +52,9 @@
 
 .items {
   color: #5a5a5a;
-  font-size: 16px; /* Зменшено для кращого вміщення */
-  font-family: 'Noto Sans', sans-serif;
+  font-size: var(--web-15-regular-font-size);
   font-weight: 400;
-  margin-top: 5px; /* Відступ між items та footer */
+  margin-top: 5px;
 }
 
 .footer {
@@ -63,17 +62,15 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 5px; /* Відступ зверху для footer */
+  margin-top: 5px;
 }
 
 .date {
   color: #5a5a5a;
-  font-size: 16px; /* Зменшений шрифт для кращого вміщення */
-  font-family: 'Noto Sans', sans-serif;
+  font-size: var(--web-15-regular-font-size);
   font-weight: 400;
 }
 
-/* Медіа запити для адаптивності шрифтів */
 @media (max-width: 600px) {
   .container {
     height: 100px;
@@ -81,20 +78,20 @@
   }
 
   .icon {
-    width: 32px; /* Ширина контейнера */
+    width: 32px;
     height: 20px;
   }
 
   .folderName {
-    font-size: 20px; /* Зменшений шрифт */
+    font-size: var(--web-20-regular-font-size);
   }
 
   .items {
-    font-size: 16px; /* Зменшений шрифт */
+    font-size: var(--web-15-regular-font-size);
   }
 
   .date {
-    font-size: 14px; /* Зменшений шрифт */
+    font-size: var(--web-13-regular-font-size);
   }
 }
 
@@ -105,14 +102,14 @@
   }
 
   .folderName {
-    font-size: 18px; /* Додаткове зменшення шрифту */
+    font-size: var(--web-18-regular-font-size);
   }
 
   .items {
-    font-size: 14px; /* Додаткове зменшення шрифту */
+    font-size: var(--web-13-regular-font-size);
   }
 
   .date {
-    font-size: 12px; /* Додаткове зменшення шрифту */
+    font-size: var(--web-13-regular-font-size);
   }
 }

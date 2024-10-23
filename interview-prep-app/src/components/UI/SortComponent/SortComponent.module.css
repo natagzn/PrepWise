@@ -2,36 +2,32 @@
   width: 100%;
   max-height: 46px;
   padding: 5px 25px 5px 10px;
-  background: white;
+  background: var(--mainwhite);
   border-radius: 15px;
-  border: 1px #5a5a5a solid;
+  border: 1px solid var(--light-gray);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 18px;
   position: relative;
   z-index: 1;
-  /* Додаємо адаптивні властивості */
-  font-size: 18px; /* Базовий розмір шрифту */
+  font-size: var(--web-18-regular-font-size);
+  font-family: var(--web-font-family);
 }
 
-/* Зменшення шрифту та ширини для малих екранів */
 @media (max-width: 768px) {
-  /* Ви можете змінити значення ширини відповідно до ваших вимог */
   .sortContainer {
-    font-size: 16px; /* Зменшуємо розмір шрифту */
-    padding: 5px 15px; /* Зменшуємо відступи */
-    /* Можливо, зменшити ширину, якщо це потрібно */
-    width: 90%; /* Зменшуємо ширину компонента */
+    font-size: var(--web-16-regular-font-size);
+    padding: 5px 15px;
+    width: 90%;
   }
 }
 
 .optionLabel {
   width: 197px;
-  color: black;
-  font-size: inherit; /* Використовуємо спадкування для адаптивності */
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 500;
+  color: var(--mainblack);
+  font-size: inherit;
+  font-weight: 400;
   word-wrap: break-word;
   cursor: pointer;
 }
@@ -48,7 +44,7 @@
   left: 0;
   width: 100%;
   padding: 14px 11px 14px 10px;
-  background: white;
+  background: var(--mainwhite);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   overflow: hidden;
@@ -60,10 +56,9 @@
 
 .sortOption {
   align-self: stretch;
-  color: black;
-  font-size: inherit; /* Використовуємо спадкування для адаптивності */
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 500;
+  color: var(--mainblack);
+  font-size: inherit;
+  font-weight: 400;
   word-wrap: break-word;
   cursor: pointer;
 }
@@ -71,5 +66,5 @@
 .separator {
   align-self: stretch;
   height: 0;
-  border: 1px #e5e5e5 solid;
+  border: 1px solid #e5e5e5;
 }

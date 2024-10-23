@@ -2,42 +2,37 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%; /* Додаємо ширину для вирівнювання */
+  width: 100%;
 }
 
 .filterSortWrapper {
   display: flex;
-  justify-content: space-between; /* Вирівнюємо по центру */
-  align-items: center; /* Центрує елементи по вертикалі */
-  margin: 0; /* Убираємо маргін */
-  padding: 0; /* Убираємо паддінг */
-  width: 100%; /* Займаємо всю ширину */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   margin-bottom: 10px;
 }
 
 .leftGroup {
-  display: flex; /* Згрупування Sort і Filter */
-  align-items: center; /* Центрує елементи по вертикалі */
-  justify-content: center; /* Вирівнюємо по центру */
-  gap: 15px; /* Відступ між компонентами */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .sortComponent {
-  width: 250px; /* Фіксована ширина для SortComponent */
+  width: 250px;
 }
 
 .filterComponent {
-  width: 90px; /* Фіксована ширина для FilterCategoryLevel */
+  width: 90px;
 }
 
-/* Новий стиль для компонента пошуку */
 .search {
-  max-width: 500px; /* Максимальна ширина */
+  max-width: 500px;
   width: 500px;
-}
-
-.search input {
-  padding: 5px;
 }
 
 .foldersList {
@@ -47,23 +42,22 @@
   justify-content: center;
 }
 
-/* Медіа запити для адаптивності */
 @media (max-width: 520px) {
   .filterSortWrapper {
-    flex-direction: column; /* Зміна на вертикальне вирівнювання */
-    align-items: center; /* Центрує елементи по горизонталі */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 100%; /* Займає всю ширину */
+    width: 100%;
     gap: 10px;
   }
 
   .leftGroup {
-    justify-content: center; /* Центрує групу Sort і Filter */
-    gap: 10px; /* Зменшуємо відступ між елементами */
+    justify-content: center;
+    gap: 10px;
   }
 
   .search {
-    max-width: 90%; /* Зменшити максимальну ширину на менших екранах */
+    max-width: 90%;
     width: 90%;
   }
 

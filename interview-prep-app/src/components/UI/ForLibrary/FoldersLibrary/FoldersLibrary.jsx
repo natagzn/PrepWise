@@ -3,17 +3,20 @@ import styles from './FoldersLibrary.module.css'; // Імпорт стилів
 import { FolderComponent } from '../../FolderComponent/FolderComponent'; // Імпорт компонента папки
 import SortComponent from '../../SortComponent/SortComponent'; // Імпорт компонента сортування
 import SearchComponent from '../../SearchComponent/SearchComponent'; // Імпорт компонента пошуку
+import { useTranslation } from 'react-i18next';
 
 const FoldersLibrary = () => {
+  const { t } = useTranslation();
+
   const [folders, setFolders] = useState([]); // Змінено на folders
   const [selectedSortingOption, setSelectedSortingOption] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   const sortingOptions = [
-    { label: 'Created (new -> old)', value: 'createdDesc' },
-    { label: 'Created (old -> new)', value: 'createdAsc' },
-    { label: 'Name (A -> Z)', value: 'nameAsc' },
-    { label: 'Name (Z -> A)', value: 'nameDesc' },
+    { label: t('created_new_old'), value: 'createdDesc' }, // Переклад
+    { label: t('created_old_new'), value: 'createdAsc' }, // Переклад
+    { label: t('name_A_Z'), value: 'nameAsc' }, // Переклад
+    { label: t('name_Z_A'), value: 'nameDesc' }, // Переклад
   ];
 
   useEffect(() => {
@@ -95,7 +98,7 @@ const FoldersLibrary = () => {
         </div>
         <div className={styles.search}>
           <SearchComponent
-            placeholder="Search folders..."
+            placeholder={t('search_folders')}
             onClick={handleSearchClick} // Передаємо обробник
           />
         </div>

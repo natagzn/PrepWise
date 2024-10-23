@@ -1,8 +1,7 @@
-/* FollowingComponent.module.css */
 .container {
   display: flex;
-  flex-direction: column; /* Вертикальне вирівнювання */
-  gap: 5px; /* Відстань між елементами */
+  flex-direction: column;
+  gap: 5px;
   margin-top: 10px;
   overflow-y: auto;
 

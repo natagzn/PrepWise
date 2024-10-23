@@ -3,43 +3,44 @@
 }
 
 .avatar {
-  width: 40px; /* Встановлюємо ширину аватара */
-  height: 40px; /* Встановлюємо висоту аватара */
-  border-radius: 9999px; /* Робимо аватар круглим */
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
   cursor: pointer;
 }
 
 .menuPanel {
   position: absolute;
-  left: -210px; /* Вирівнюємо по лівому краю для відкриття вліво */
-  top: 110%; /* Встановлюємо на 100% від висоти аватара для відкриття під ним */
+  left: -210px;
+  top: 110%;
   width: 255px;
-  height: auto; /* Автоматична висота */
+  height: auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
-  border: 1px #e5e5e5 solid;
-  z-index: 10; /* Щоб меню було зверху */
+  border: 1px solid #e5e5e5;
+  z-index: 10;
+  font-family: var(--web-font-family);
 }
 
 .menu {
   background: white;
   border-radius: 15px;
-  padding: 10px 20px; /* Відступи навколо меню */
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Відстань між елементами меню */
+  gap: 10px;
 }
 
 .userInfo {
   display: flex;
   align-items: center;
-  gap: 13px; /* Відстань між іконкою та текстом */
+  gap: 13px;
 }
 
 .userIcon {
   width: 40px;
   height: 40px;
-  border-radius: 9999px; /* Робимо іконку круглою */
+  border-radius: 9999px;
 }
 
 .userDetails {
@@ -49,43 +50,40 @@
 
 .username {
   color: #1e1e1e;
-  font-size: 15px;
-  font-family: 'Sofia Sans', sans-serif;
+  font-size: var(--web-15-regular-font-size);
   font-weight: 600;
 }
 
 .email {
   color: black;
-  font-size: 12px;
-  font-family: 'Sofia Sans', sans-serif;
+  font-size: var(--web-13-regular-font-size);
   font-weight: 300;
 }
 
 .separator {
-  border: 0.5px #e5e5e5 solid;
+  border: 0.5px solid #e5e5e5;
 }
 
 .menuItem {
   display: flex;
   align-items: center;
   color: black;
-  font-size: 16px;
-  font-family: 'Sofia Sans', sans-serif;
+  font-size: var(--web-15-regular-font-size);
   font-weight: 400;
   cursor: pointer;
-  text-decoration: none; /* Забирає підкреслення тексту */
-  color: inherit; /* Зберігає поточний колір тексту */
+  text-decoration: none;
+  color: inherit;
 }
 
 .menuIcon {
-  width: 25px; /* Ширина іконки */
-  height: 25px; /* Висота іконки */
-  margin-right: 10px; /* Відступ праворуч від іконки */
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
   background-color: white;
 }
 
 .homeIcon {
-  width: 20px; /* Наприклад, можна зробити її меншою за інші */
+  width: 20px;
   height: 20px;
   margin-right: 17px;
 }
@@ -101,38 +99,37 @@
     width: 230px;
     left: -185px;
   }
-  /* Для екранів до 768px */
   .avatar {
-    width: 40px; /* Зменшуємо ширину аватара */
-    height: 40px; /* Зменшуємо висоту аватара */
+    width: 40px;
+    height: 40px;
   }
 
   .menuItem {
-    font-size: 14px; /* Зменшуємо розмір шрифту */
-    gap: 8px; /* Зменшуємо відстань між елементами меню */
+    font-size: var(--web-15-regular-font-size);
+    gap: 8px;
   }
 
   .userIcon {
-    width: 40px; /* Зменшуємо ширину іконки */
-    height: 40px; /* Зменшуємо висоту іконки */
+    width: 40px;
+    height: 40px;
   }
 
   .menuIcon {
-    width: 18px; /* Зменшуємо ширину іконки меню */
-    height: 18px; /* Зменшуємо висоту іконки меню */
+    width: 18px;
+    height: 18px;
   }
 
   .menuItem img {
-    width: 18px; /* Ширина іконки */
+    width: 18px;
     height: 18px;
   }
 
   .username {
-    font-size: 13px; /* Зменшуємо розмір шрифту для імені користувача */
+    font-size: var(--web-13-regular-font-size);
   }
 
   .email {
-    font-size: 10px; /* Зменшуємо розмір шрифту для email */
+    font-size: var(--web-10-regular-font-size);
   }
 
   .menu {
@@ -141,39 +138,37 @@
 }
 
 @media (max-width: 480px) {
-  /* Для екранів до 480px */
-
   .menuPanel {
     width: 200px;
     left: -155px;
   }
 
   .avatar {
-    width: 40px; /* Зменшуємо ширину аватара */
-    height: 40px; /* Зменшуємо висоту аватара */
+    width: 40px;
+    height: 40px;
   }
 
   .menuItem {
-    font-size: 12px; /* Зменшуємо розмір шрифту */
-    gap: 5px; /* Зменшуємо відстань між елементами меню */
+    font-size: var(--web-13-regular-font-size);
+    gap: 5px;
   }
 
   .userIcon {
-    width: 35px; /* Зменшуємо ширину іконки */
-    height: 35px; /* Зменшуємо висоту іконки */
+    width: 35px;
+    height: 35px;
   }
 
   .menuIcon {
-    width: 15px; /* Зменшуємо ширину іконки меню */
-    height: 15px; /* Зменшуємо висоту іконки меню */
+    width: 15px;
+    height: 15px;
   }
 
   .username {
-    font-size: 11px; /* Зменшуємо розмір шрифту для імені користувача */
+    font-size: var(--web-10-regular-font-size);
   }
 
   .email {
-    font-size: 9px; /* Зменшуємо розмір шрифту для email */
+    font-size: var(--web-10-regular-font-size);
   }
 
   .menu {

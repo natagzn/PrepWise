@@ -5,19 +5,22 @@ import SortComponent from '../../SortComponent/SortComponent';
 import FilterCategoryLevel from '../../FilterCategoryLevel/FilterCategoryLevel';
 import SearchComponent from '../../SearchComponent/SearchComponent';
 
+import { useTranslation } from 'react-i18next';
+
 const QuestionSetsLibrary = () => {
+  const { t } = useTranslation();
+
   const [questionSets, setQuestionSets] = useState([]);
   const [loadedSets, setLoadedSets] = useState(8);
   const [selectedSortingOption, setSelectedSortingOption] = useState(null);
   const [searchTerm, setSearchTerm] = useState(''); // Додано для збереження терміна пошуку
 
   const sortingOptions = [
-    { label: 'Created (new -> old)', value: 'createdDesc' },
-    { label: 'Created (old -> new)', value: 'createdAsc' },
-    { label: 'Name (A -> Z)', value: 'nameAsc' },
-    { label: 'Name (Z -> A)', value: 'nameDesc' },
+    { label: t('created_new_old'), value: 'createdDesc' }, // Переклад
+    { label: t('created_old_new'), value: 'createdAsc' }, // Переклад
+    { label: t('name_A_Z'), value: 'nameAsc' }, // Переклад
+    { label: t('name_Z_A'), value: 'nameDesc' }, // Переклад
   ];
-
   const handleSortChange = (value) => {
     setSelectedSortingOption(value);
   };
@@ -182,7 +185,7 @@ const QuestionSetsLibrary = () => {
         </div>
         <div className={styles.search}>
           <SearchComponent
-            placeholder="Search your sets"
+            placeholder={t('search_sets')}
             onClick={handleSearchClick} // Передаємо обробник
           />
         </div>

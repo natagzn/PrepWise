@@ -10,7 +10,6 @@ import { tr } from 'framer-motion/client';
 import SearchComponent from './components/UI/SearchComponent/SearchComponent';
 import AvatarMenu from './components/UI/AvatarMenu/AvatarMenu';
 import NotificationsList from './components/UI/NotificationComponent/NotificationList/NotificationList';
-import LoginPage from './pages/Auth/LoginForm';
 import AuthPage from './pages/Auth/AuthPage';
 import MainPage from './pages/MainPage/MainPage';
 import { Route, Routes } from 'react-router-dom';
@@ -19,6 +18,7 @@ import NotificationPage from './pages/NotificationPage/NotificationPage';
 
 import PeopleComponent from './components/UI/PeopleComponent/PeopleComponent';
 import PeoplePage from './pages/PeoplePage/PeoplePage';
+import SettingsPage from './pages/SettingsPage/SettingsPage';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -40,6 +40,7 @@ function App() {
       <Route path="/library" element={<YourLibraryPage />} />
       <Route path="/notifications" element={<NotificationPage />} />
       <Route path="/people" element={<PeoplePage />} />
+      <Route path="/settings" element={<SettingsPage />} />
       {/* Додай інші сторінки за потреби */}
     </Routes>
   );

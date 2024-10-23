@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './FilterCategoryLevel.module.css';
 
+import { useTranslation } from 'react-i18next';
+
 const FilterCategoryLevel = ({ filters, onApply, selectedFilters }) => {
+  const { t } = useTranslation();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [localSelectedFilters, setLocalSelectedFilters] = useState({});
 
@@ -55,7 +59,7 @@ const FilterCategoryLevel = ({ filters, onApply, selectedFilters }) => {
   return (
     <div>
       <div className={styles.filterButton} onClick={() => setIsModalOpen(true)}>
-        Filter
+        {t('filter')}
       </div>
 
       {isModalOpen && (
@@ -82,8 +86,8 @@ const FilterCategoryLevel = ({ filters, onApply, selectedFilters }) => {
             ))}
 
             <div className={styles.modalActions}>
-              <button onClick={handleApply}>Apply</button>
-              <button onClick={handleClose}>Cancel</button>
+              <button onClick={handleApply}>{t('apply')}</button>
+              <button onClick={handleClose}>{t('cancel')}</button>
             </div>
           </div>
         </div>

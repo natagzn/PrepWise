@@ -1,65 +1,60 @@
-/* Основний контейнер для ресурсів */
 .resourcesWrapper {
   margin: 0 auto;
-  padding: 5px 0px;
+  padding: 5px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
 }
 
-/* Контейнер для фільтрів і сортування */
 .filterSortWrapper {
   display: flex;
-  justify-content: space-between; /* Відстань між лівою і правою частинами */
-  align-items: center; /* Центрує елементи по вертикалі */
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
   height: fit-content;
   min-width: 400px;
+  width: 100%;
+  align-self: center;
 }
 
-/* Ліва група з сортуванням і фільтрами */
 .leftGroup {
-  display: flex; /* Згрупування сортування і фільтра */
-  align-items: center; /* Центрує елементи по вертикалі */
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
   gap: 15px;
 }
 
-/* Стиль для компонента сортування */
 .sortComponent {
-  width: 250px; /* Фіксована ширина для сортування */
+  width: 250px;
 }
 
-/* Стиль для компонента фільтра */
 .filterComponent {
-  width: 150px; /* Фіксована ширина для фільтра категорії */
+  width: 150px;
+  margin-right: 15px;
 }
 
-/* Стиль для компонента пошуку */
 .search {
-  max-width: 500px; /* Максимальна ширина */
+  max-width: 500px;
   width: 500px;
 }
 
-/* Контейнер для відображення списку ресурсів */
 .resourcesList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px; /* Відстань між ресурсами */
+  gap: 20px;
 }
 
-/* Адаптивні стилі для мобільних пристроїв */
 @media (max-width: 768px) {
   .filterSortWrapper {
-    flex-direction: column; /* Зміна на вертикальне вирівнювання */
-    align-items: center; /* Центрує елементи по горизонталі */
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
   .leftGroup {
-    justify-content: center; /* Центрує групу сортування і фільтра */
+    justify-content: center;
     margin-bottom: 10px;
     width: 90%;
     margin-left: 10px;
@@ -67,7 +62,7 @@
   }
 
   .search {
-    max-width: 90%; /* Зменшена максимальна ширина */
+    max-width: 90%;
     width: 90%;
   }
 

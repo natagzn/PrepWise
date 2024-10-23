@@ -3,13 +3,12 @@ import { motion } from 'framer-motion';
 import styles from './LoginForm.module.css';
 import { useTranslation } from 'react-i18next';
 
-const LoginForm = () => {
+const LoginForm = ({ onForgotPassword }) => {
   const { t } = useTranslation(); // Отримуємо функцію t для перекладів
 
-  // Налаштовуємо анімаційні параметри
   const inputVariants = {
-    hidden: { opacity: 0, y: -20 }, // Початковий стан (невидимий)
-    visible: { opacity: 1, y: 0 }, // Кінцевий стан (видимий)
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -23,7 +22,7 @@ const LoginForm = () => {
       >
         <input
           type="text"
-          placeholder={t('email_or_username')} // Використовуємо t для перекладу
+          placeholder={t('email_or_username')}
           className={styles.input}
         />
       </motion.div>
@@ -33,11 +32,11 @@ const LoginForm = () => {
         initial="hidden"
         animate="visible"
         variants={inputVariants}
-        transition={{ duration: 0.5, delay: 0.2 }} // Затримка для другого поля
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <input
           type="password"
-          placeholder={t('password')} // Використовуємо t для перекладу
+          placeholder={t('password')}
           className={styles.input}
         />
       </motion.div>
@@ -47,9 +46,10 @@ const LoginForm = () => {
         initial="hidden"
         animate="visible"
         variants={inputVariants}
-        transition={{ duration: 0.5, delay: 0.4 }} // Затримка для тексту "Forgot password?"
+        transition={{ duration: 0.5, delay: 0.4 }}
+        onClick={onForgotPassword} // Додаємо обробник кліку
       >
-        {t('forgot_password')} {/* Використовуємо t для перекладу */}
+        {t('forgot_password')}
       </motion.div>
 
       <motion.button
@@ -57,9 +57,9 @@ const LoginForm = () => {
         initial="hidden"
         animate="visible"
         variants={inputVariants}
-        transition={{ duration: 0.5, delay: 0.6 }} // Затримка для кнопки
+        transition={{ duration: 0.5, delay: 0.6 }}
       >
-        {t('log_in')} {/* Використовуємо t для перекладу */}
+        {t('log_in')}
       </motion.button>
     </div>
   );

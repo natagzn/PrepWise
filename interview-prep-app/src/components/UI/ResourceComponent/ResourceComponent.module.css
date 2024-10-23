@@ -2,13 +2,14 @@
   width: 440px;
   height: fit-content;
   padding: 11px 9px;
-  background: white;
+  background: var(--mainwhite);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   display: inline-flex;
   flex-direction: column;
   gap: 10px;
   margin: 10px;
+  font-family: var(--web-font-family);
 }
 
 .content {
@@ -45,17 +46,15 @@
 
 .username {
   color: black;
-  font-size: 20px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-20-regular-font-size);
   font-weight: 700;
   word-wrap: break-word;
 }
 
-/* Стиль для категорії та лейблу "Category" */
 .categoryContainer {
   display: flex;
   align-items: center;
-  gap: 10px; /* Відступ між "Category" і самою категорією */
+  gap: 10px;
 }
 
 .categoryText {
@@ -63,8 +62,7 @@
   background: #d6dbe1;
   border-radius: 10px;
   color: black;
-  font-size: 14px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-14-regular-font-size);
   font-weight: 400;
   word-wrap: break-word;
   width: fit-content;
@@ -78,16 +76,14 @@
 
 .articleLabel {
   color: black;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 700;
   margin-right: 5px;
 }
 
 .articleTitle {
   color: black;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 400;
   flex: 1;
   word-wrap: break-word;
@@ -100,16 +96,14 @@
 
 .descriptionLabel {
   color: black;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 700;
   word-wrap: break-word;
 }
 
 .descriptionText {
   color: black;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 400;
   word-wrap: break-word;
   margin-top: 5px;
@@ -124,8 +118,7 @@
 
 .date {
   color: #5a5a5a;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 400;
   word-wrap: break-word;
 }
@@ -137,8 +130,7 @@
 
 .likesCount {
   color: black;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 400;
   word-wrap: break-word;
   margin-right: 5px;
@@ -153,8 +145,7 @@
 
 .dislikesCount {
   color: black;
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 400;
   word-wrap: break-word;
   margin-right: 5px;
@@ -173,7 +164,7 @@
   }
 
   .username {
-    font-size: 18px;
+    font-size: var(--web-18-regular-font-size);
   }
 
   .articleLabel,
@@ -183,11 +174,11 @@
   .date,
   .likesCount,
   .dislikesCount {
-    font-size: 16px;
+    font-size: var(--web-15-regular-font-size);
   }
 
   .category {
-    font-size: 12px;
+    font-size: var(--web-13-regular-font-size);
   }
 }
 
@@ -198,7 +189,7 @@
   }
 
   .username {
-    font-size: 16px;
+    font-size: var(--web-15-regular-font-size);
   }
 
   .articleLabel,
@@ -208,10 +199,10 @@
   .date,
   .likesCount,
   .dislikesCount {
-    font-size: 14px;
+    font-size: var(--web-15-regular-font-size);
   }
 
   .category {
-    font-size: 10px;
+    font-size: var(--web-10-regular-font-size);
   }
 }

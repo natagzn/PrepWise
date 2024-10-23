@@ -5,21 +5,21 @@
   gap: 15px;
   align-items: center;
   margin-bottom: 10px;
-  flex-direction: row; /* За замовчуванням всі елементи йдуть в один рядок */
+  flex-direction: row;
+  font-family: var(--web-font-family);
 }
 
 .notificationHeader {
-  flex-shrink: 0; /* Заголовок залишиться на місці */
+  flex-shrink: 0;
 }
 
 .notificationText {
-  flex-grow: 1; /* Текст розтягується на всю доступну ширину */
+  flex-grow: 1;
 }
 
 @media (max-width: 1220px) {
-  /* Для екранів менших за 768px */
   .notificationItem {
-    flex-direction: column; /* Елементи переходять в колонку */
+    flex-direction: column;
     padding: 15px;
     gap: 20px;
     align-items: flex-start;

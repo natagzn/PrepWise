@@ -1,64 +1,54 @@
 .textContainer {
   display: flex;
-  justify-content: space-between; /* Розподіляє дві групи */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
 .textGroup {
   display: flex;
-  flex-direction: row; /* Розміщує message і description в рядок за замовчуванням */
-  max-width: 80%; /* Додає обмеження ширини для текстової групи */
+  flex-direction: row;
+  max-width: 80%;
 }
 
 .message {
-  font-size: 20px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-20-regular-font-size);
   font-weight: 600;
   color: black;
-  margin-right: 10px; /* Відступ між message і description */
+  margin-right: 10px;
 }
 
 .description {
-  font-size: 20px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-20-regular-font-size);
   font-weight: 400;
   color: #5a5a5a;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; /* Обрізає текст, якщо він не вміщається */
+  white-space: nowrap;
 }
 
 .date {
-  font-size: 18px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-18-regular-font-size);
   font-weight: 400;
   color: #5a5a5a;
   white-space: nowrap;
-  right: 10; /* Відступ для відокремлення дати */
+  margin-right: 10px;
 }
 
 @media (max-width: 1220px) {
   .textGroup {
-    flex-direction: column; /* Змінює напрямок на колонку при зменшенні ширини */
-  }
-}
-
-/* Медіазапит для зменшення шрифта */
-@media (max-width: 1220px) {
-  .textGroup {
-    flex-direction: column; /* Змінює напрямок на колонку при зменшенні ширини */
+    flex-direction: column;
   }
 
   .message {
-    font-size: 15px; /* Зменшений розмір шрифту для message */
+    font-size: var(--web-15-regular-font-size);
   }
 
   .description {
-    font-size: 15px; /* Зменшений розмір шрифту для description */
+    font-size: var(--web-15-regular-font-size);
   }
 
   .date {
-    font-size: 15px; /* Зменшений розмір шрифту для дати */
+    font-size: var(--web-15-regular-font-size);
   }
 }

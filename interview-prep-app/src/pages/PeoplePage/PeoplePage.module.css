@@ -1,18 +1,18 @@
 .container {
-  background: rgba(0, 0, 0, 0.5); /* Чорний полупрозорий фон */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Висота на весь екран */
+  height: 100vh;
 }
 
 .peoplePage {
   width: 600px;
   height: 500px;
-  background: white;
+  background: var(--mainwhite);
   border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-  padding: 20px; /* Відступи для внутрішнього контенту */
+  box-shadow: var(--shadow);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -21,52 +21,53 @@
 .headerContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Розмістити елементи по краях */
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .closeButton {
   background: none;
   border: none;
-  font-size: 24px; /* Розмір шрифту для іконки */
+  font-size: var(--web-23-regular-font-size); /* Очищено на існуючу змінну */
   cursor: pointer;
-  color: #555; /* Колір іконки */
+  color: var(--maingray);
 }
 
 .closeButton:hover {
-  color: #000; /* Зміна кольору при наведенні */
+  color: var(--mainblack);
 }
 
 .username {
-  font-size: 24px;
-  font-weight: 600;
-  flex-grow: 1; /* Залишити простір для username */
-  text-align: center; /* Центрувати текст */
+  font-size: var(--web-23-regular-font-size); /* Очищено на існуючу змінну */
+  font-family: var(--web-font-family);
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
 }
 
-/* Вкладки */
 .tabs {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
-  border-bottom: 2px solid #ddd; /* Сіра лінія під вкладками */
+  border-bottom: 2px solid #ddd;
 }
 
 .tab {
   padding: 0px 20px;
   cursor: pointer;
   position: relative;
-  color: #555;
-  font-size: 16px;
-  font-family: 'Noto Sans';
+  color: var(--maingray);
+  font-size: var(--web-18-regular-font-size); /* Очищено на існуючу змінну */
+  font-family: var(--web-font-family);
 }
 
 .tab:hover {
-  color: #000; /* Зміна кольору при наведенні */
+  color: var(--mainblack);
 }
 
 .active {
   font-weight: bold;
-  color: #000; /* Чорний текст для активної вкладки */
+  color: var(--mainblack);
 }
 
 .active::after {
@@ -76,7 +77,7 @@
   bottom: -2px;
   height: 2px;
   width: 100%;
-  background-color: #144250; /* Зелена лінія під активною вкладкою */
+  background-color: var(--maingreen);
 }
 
 .tabContent {
@@ -84,6 +85,11 @@
 
 @media (max-width: 500px) {
   .tab {
-    font-size: 15px;
+    font-size: var(--web-15-regular-font-size);
+    padding: 0 10px;
+    text-align: center;
+  }
+  .username {
+    font-size: var(--web-18-regular-font-size);
   }
 }

@@ -29,7 +29,7 @@
   "confirm_password": "Confirm Password",
   "sign_up": "Sign up",
 
-  "enter_your_request": "Enter your request",
+  "enter_your_request": "Enter your request...",
   "recommended_from_your_following": "Recommended from your following",
   "question_sets": "Question sets",
   "resources": "Resources",
@@ -58,12 +58,23 @@
 
   "free_trial": "Free 7-day trial",
 
-  "search_user": "Search user",
+  "search_user": "Search user...",
   "no_users_found": "No users found",
 
   "created_new_old": "Created (new -> old)",
   "created_old_new": "Created (old -> new)",
   "name_A_Z": "Name (A -> Z)",
   "name_Z_A": "Name (Z -> A)",
-  "search_resources": "Search your resources"
+  "search_resources": "Search your resources...",
+  "search_folders": "Search your folders...",
+  "search_sets": "Search your sets...",
+
+  "filter": "Filter",
+  "apply": "Apply",
+  "cancel": "Cancel",
+
+  "reset_password": "Enter the email to reset your password",
+  "email_confirmation": "Confirm email",
+  "new_password": "New password",
+  "enter_new_password": "Enter new password"
 }

@@ -1,9 +1,8 @@
-/* NotificationHeader.module.css */
 .headerContainer {
   height: fit-content;
   display: flex;
-  align-items: center; /* Вирівнювання іконки та тексту по вертикалі */
-  gap: 10px; /* Відступ між іконкою і заголовком */
+  align-items: center;
+  gap: 10px;
   width: 270px;
   min-width: 270px;
 }
@@ -12,7 +11,7 @@
   width: 40px;
   height: 40px;
   padding: 10px;
-  background: var(--iconColor);
+  background: var(--mainred);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -20,8 +19,8 @@
 }
 
 .iconImage {
-  width: 20px; /* Ширина іконки */
-  height: 20px; /* Висота іконки */
+  width: 20px;
+  height: 20px;
 }
 
 .iconInner {
@@ -38,16 +37,15 @@
 
 .title {
   color: black;
-  font-size: 20px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-20-regular-font-size);
   font-weight: 600;
-  margin-right: 10px; /* Відступ між заголовком і лічильником */
+  margin-right: 10px;
 }
 
 .count {
   width: 16px;
   height: 16px;
-  background: #f96f5d;
+  background: var(--mainred);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -56,18 +54,17 @@
 
 .countText {
   color: white;
-  font-size: 12px;
-  font-family: 'Noto Sans';
+  font-size: var(--web-13-regular-font-size);
   font-weight: 600;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .title {
-    font-size: 18px; /* Зменшений розмір шрифту для заголовка */
+    font-size: var(--web-18-regular-font-size);
   }
 
   .countText {
-    font-size: 10px; /* Зменшений розмір шрифту для лічильника */
+    font-size: var(--web-10-regular-font-size);
   }
 }

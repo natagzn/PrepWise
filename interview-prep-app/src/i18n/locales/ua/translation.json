@@ -29,7 +29,7 @@
   "confirm_password": "Підтвердьте пароль",
   "sign_up": "Зареєструватися",
 
-  "enter_your_request": "Введіть свій запит",
+  "enter_your_request": "Введіть свій запит...",
   "recommended_from_your_following": "Рекомендовані з ваших підписок",
   "question_sets": "Набори запитань",
   "resources": "Ресурси",
@@ -58,12 +58,23 @@
 
   "free_trial": "Пробний період",
 
-  "search_user": "Пошук користувача",
+  "search_user": "Пошук користувача...",
   "no_users_found": "Користувачів не знайдено",
 
-  "created_new_old": "Створено (нові -> старі)",
-  "created_old_new": "Створено (старі -> нові)",
+  "created_new_old": "Дата (нові -> старі)",
+  "created_old_new": "Дата (старі -> нові)",
   "name_A_Z": "Назва (А -> Я)",
   "name_Z_A": "Назва (Я -> А)",
-  "search_resources": "Пошук ваших ресурсів"
+  "search_resources": "Пошук ваших ресурсів...",
+  "search_folders": "Пошук ваших папок...",
+  "search_sets": "Пошук ваших сетів...",
+
+  "filter": "Фільтр",
+  "apply": "Застосувати",
+  "cancel": "Відмінити",
+
+  "reset_password": "Введіть пошту для скидання паролю",
+  "email_confirmation": "Підтвердити пошту",
+  "new_password": "Новий пароль",
+  "enter_new_password": "Введіть новйий пароль"
 }

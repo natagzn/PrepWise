@@ -3,8 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: #1d1352;
+  background: var(--landingdark-blue);
   width: 100%;
+  font-family: var(--web-font-family);
 }
 
 .left-group {
@@ -15,9 +16,8 @@
 
 .logo {
   color: white;
-  font-size: 28px;
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 700;
+  font-size: var(--web-30-regular-font-size);
+  font-weight: 500;
 }
 
 .right-group {
@@ -41,8 +41,7 @@
 
 .premium-text {
   color: black;
-  font-size: 15px;
-  font-family: 'Noto Sans', sans-serif;
+  font-size: var(--web-15-regular-font-size);
   font-weight: 500;
 }
 
@@ -59,33 +58,32 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* затемнення фону */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow: hidden; /* Відключаємо прокрутку */
+  overflow: hidden;
 }
 
 .modalContent {
-  width: 100vw; /* Ширина на весь екран */
-  height: 100vh; /* Висота на весь екран */
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-y: hidden; /* Прибираємо вертикальну прокрутку */
-  border: none; /* Прибираємо рамки */
-  box-shadow: none; /* Прибираємо тінь */
-  border-radius: 0; /* Прибираємо закруглення */
+  overflow-y: hidden;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
-/* Адаптивні стилі для різних розмірів екранів */
 @media (max-width: 1200px) {
   .logo {
-    font-size: 25px;
+    font-size: var(--web-23-regular-font-size);
   }
 
   .premium-text {
-    font-size: 12px;
+    font-size: var(--web-13-regular-font-size);
   }
 
   .plus-box {
@@ -93,7 +91,7 @@
     height: 38px;
   }
 
-  .avatar img {
+  .avatar {
     width: 40px;
     height: 40px;
   }
@@ -108,7 +106,7 @@
   }
 
   .logo {
-    font-size: 25px;
+    font-size: var(--web-23-regular-font-size);
   }
 
   .premium-box {
@@ -116,7 +114,7 @@
   }
 
   .premium-text {
-    font-size: 12px;
+    font-size: var(--web-13-regular-font-size);
   }
 
   .plus-box {
@@ -136,7 +134,7 @@
   }
 
   .logo {
-    font-size: 20px;
+    font-size: var(--web-20-regular-font-size);
   }
 
   .premium-box {
@@ -144,7 +142,7 @@
   }
 
   .premium-text {
-    font-size: 12px;
+    font-size: var(--web-13-regular-font-size);
   }
 
   .plus-box {

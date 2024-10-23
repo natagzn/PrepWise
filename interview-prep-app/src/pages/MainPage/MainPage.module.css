@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
 }
-/* Для каруселі з одним або двома елементами */
+
 .centered {
-  justify-content: center; /* Центрує елементи по горизонталі */
+  justify-content: center;
 }
 
 .search {
@@ -15,7 +15,7 @@
 }
 
 .recommendationTitle {
-  font-size: 30px;
+  font-size: var(--web-30-regular-font-size); /* Використано змінну */
   font-weight: bold;
   padding: 10px 40px;
   width: 100%;
@@ -23,7 +23,7 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: var(--web-23-regular-font-size); /* Використано змінну */
   font-weight: 500;
   margin: 15px 40px;
 }
@@ -37,70 +37,68 @@
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden; /* Сховати елементи, що виходять за межі */
-  padding: 0 30px; /* Відступи зліва і справа */
+  overflow: hidden;
+  padding: 0 30px;
 }
 
 .questionSetContainer,
 .resourceContainer {
-  display: flex; /* Вирівнювання компонентів в ряд */
-  transition: transform 0.3s ease; /* Плавний перехід */
-  width: 100%; /* Витягувати 100% ширини контейнера */
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .questionSetComponent,
 .resourceComponent {
-  box-sizing: border-box; /* Включає відступи та межі у загальну ширину */
-  margin: 10px; /* Відступи між компонентами */
+  box-sizing: border-box;
+  margin: 10px;
 }
 
-/* Налаштування стрілок */
 .arrowLeft,
 .arrowRight {
-  background-color: transparent; /* Зробіть фон прозорим */
-  border: none; /* Без рамки */
-  cursor: pointer; /* Курсор у вигляді руки */
-  position: absolute; /* Позиція абсолютна для стрілок */
-  top: 50%; /* Вертикальне вирівнювання */
-  transform: translateY(-50%); /* Центруємо по вертикалі */
-  z-index: 2; /* Впереди контейнера */
-  font-size: 40px; /* Збільште розмір шрифта для стрілок */
-  opacity: 0; /* Початкова непрозорість */
-  transition: opacity 0.3s ease; /* Плавний перехід для появи */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: var(--web-40-regular-font-size); /* Використано змінну */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .arrowLeft {
-  left: 0px; /* Відстань від лівого краю */
+  left: 0px;
 }
 
 .arrowRight {
-  right: 10px; /* Відстань від правого краю */
+  right: 10px;
 }
 
-/* Показувати стрілки при наведенні на карусель */
 .carousel:hover .arrowLeft,
 .carousel:hover .arrowRight {
-  opacity: 1; /* Змінити на видимість при наведенні */
+  opacity: 1;
 }
 
 @media (min-width: 940px) {
   .questionSetComponent,
   .resourceComponent {
-    flex: 0 0 calc(33.33% - 20px); /* По 3 елементи */
+    flex: 0 0 calc(33.33% - 20px);
   }
 }
 
 @media (min-width: 600px) and (max-width: 940px) {
   .questionSetComponent,
   .resourceComponent {
-    flex: 0 0 calc(50% - 20px); /* По 2 елементи */
+    flex: 0 0 calc(50% - 20px);
   }
 }
 
 @media (max-width: 600px) {
   .questionSetComponent,
   .resourceComponent {
-    flex: 0 0 100%; /* По 1 елементу */
+    flex: 0 0 100%;
   }
 }
 
@@ -117,10 +115,6 @@
 
 @media (max-width: 480px) {
   .questionSetComponent {
-    flex: 0 0 100%; /* На найменших екранах по 1 елементу в ряд */
-  }
-
-  .carousel {
-    padding: 7px;
+    flex: 0 0 100%;
   }
 }

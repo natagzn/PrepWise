@@ -1,17 +1,19 @@
 .libraryPage {
+  font-family: var(--web-font-family);
   padding: 10px 40px;
   align-self: center;
 }
 
 .header {
-  font-size: 35px;
+  font-size: var(--web-35-regular-font-size);
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 /* Адаптивність для заголовка */
 @media (max-width: 1200px) {
   .header {
-    font-size: 28px;
+    font-size: var(--web-30-regular-font-size);
     margin-bottom: 7px;
   }
 }
@@ -20,22 +22,28 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--light-gray);
+  align-items: center;
+  text-align: center;
+  height: 60px; /* Встановлюємо фіксовану висоту для всього блоку вкладок */
 }
 
 /* Адаптивність для вкладок */
 .tab {
   padding: 10px 20px;
-  font-size: 23px;
+  font-size: var(--web-23-regular-font-size);
   cursor: pointer;
   position: relative;
-  color: #555;
+  color: var(--maingray);
+  height: 100%; /* Таб має займати всю висоту батьківського контейнера */
+  display: flex;
+  align-items: center; /* Центрування тексту вертикально */
 }
 
 @media (max-width: 768px) {
   .tab {
-    font-size: 18px; /* Зменшити шрифт для менших екранів */
-    padding: 8px 8px; /* Зменшити відступи */
+    font-size: var(--web-18-regular-font-size);
+    padding: 8px 8px;
   }
 
   .libraryPage {
@@ -44,12 +52,12 @@
 }
 
 .tab:hover {
-  color: #000;
+  color: var(--mainblack);
 }
 
 .active {
   font-weight: bold;
-  color: #000;
+  color: var(--mainblack);
 }
 
 .active::after {
@@ -59,7 +67,7 @@
   bottom: -2px;
   height: 2px;
   width: 100%;
-  background-color: #000;
+  background-color: var(--mainblack);
 }
 
 .tabContent {
@@ -80,11 +88,11 @@
   }
 
   .tab {
-    font-size: 16px;
+    font-size: var(--web-18-regular-font-size);
   }
 
   .header {
-    font-size: 23px;
+    font-size: var(--web-23-light-font-size);
     margin-bottom: 5px;
   }
 }

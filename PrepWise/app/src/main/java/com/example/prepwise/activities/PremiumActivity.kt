@@ -26,7 +26,7 @@ class PremiumActivity : AppCompatActivity() {
         val close: ImageView = findViewById(R.id.close)
         close.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("openFragment", "ProfileFragment")  // Передаємо інформацію про фрагмент
+            intent.putExtra("openFragment", "HomeFragment")
             startActivity(intent)
             finish()
         }

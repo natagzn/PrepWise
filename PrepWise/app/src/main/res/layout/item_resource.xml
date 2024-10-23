@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:paddingHorizontal="15dp"
     android:paddingVertical="13dp"
+    android:layout_marginBottom="10dp"
     android:background="@drawable/white_rounded_background"
     android:elevation="4dp">
 
@@ -156,14 +157,14 @@
                 style="@style/semi_bold_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:text="10" />
 
             <ImageView
                 android:id="@+id/like"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="4dp"
+                android:layout_marginEnd="8dp"
                 app:srcCompat="@drawable/like" />
 
             <TextView
@@ -171,13 +172,13 @@
                 style="@style/semi_bold_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
                 android:text="5" />
 
             <ImageView
                 android:id="@+id/dislike"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="4dp"
                 app:srcCompat="@drawable/dislike" />
 
         </LinearLayout>

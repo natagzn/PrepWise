@@ -130,12 +130,11 @@
             android:textColor="@color/black" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/quesyion_sets_list"
+            android:id="@+id/set_list"
             android:layout_width="match_parent"
-            android:layout_height="138dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
+            android:paddingHorizontal="5dp"
             android:scrollbars="horizontal" />
 
         <TextView
@@ -151,10 +150,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/resource_list"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingHorizontal="15dp"
+            android:paddingHorizontal="5dp"
             android:scrollbars="horizontal" />
 
         <TextView

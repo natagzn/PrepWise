@@ -33,30 +33,37 @@
             android:textColor="@color/black"/>
 
         <LinearLayout
-            android:id="@+id/access"
+            android:id="@+id/sharing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:visibility="visible">
 
             <ImageView
-                android:id="@+id/access_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
                 app:srcCompat="@drawable/sharing" />
 
             <TextView
-                android:id="@+id/access_type"
+                android:id="@+id/sharing_type"
                 style="@style/light_12"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="@string/sharing"
+                android:text="@string/edit"
                 android:textColor="@color/gray" />
 
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/like2"
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:srcCompat="@drawable/not_save" />
 
     </LinearLayout>
 
@@ -154,47 +161,11 @@
             android:textColor="@color/black" />
 
         <LinearLayout
+            android:id="@+id/categories_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/category1"
-                style="@style/semi_bold_12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/blue_rounded_background"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="2dp"
-                android:text="Flutter"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/category2"
-                style="@style/semi_bold_12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/blue_rounded_background"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="2dp"
-                android:text="Kotlin"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/category3"
-                style="@style/semi_bold_12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/blue_rounded_background"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="2dp"
-                android:text="Java"
-                android:textColor="@color/black" />
-        </LinearLayout>
+            android:orientation="horizontal"/>
 
     </LinearLayout>
 
@@ -239,7 +210,7 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/username_co_authos"
+            android:id="@+id/username_co_authors"
             style="@style/light_12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

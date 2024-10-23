@@ -80,7 +80,7 @@
     <string name="dont_have_an_account">Немає акаунту? </string>
 
     <string name="folders">Папки</string>
-    <string name="shared">Поширеня</string>
+    <string name="shared">Поширені</string>
     <string name="sort">Сортування</string>
     <string name="filter">Фільтрація</string>
 
@@ -114,8 +114,8 @@
 
     <string name="view_profile">Переглянути профіль</string>
     <string name="sharing">поширено</string>
-    <string name="sharing_view">поширено/перегляд</string>
-    <string name="sharing_edit">поширено/редагування</string>
+    <string name="view">перегляд</string>
+    <string name="edit">редагування</string>
     <string name="author">Автор:</string>
     <string name="co_authors">Співавтори:</string>
 </resources>

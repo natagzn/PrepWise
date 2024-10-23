@@ -7,9 +7,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.LikedFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/name_page"
@@ -20,6 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_gravity="center"
             android:text="@string/liked"
             android:textColor="@color/black" />
 
@@ -30,7 +32,7 @@
             app:layout_constraintTop_toBottomOf="@+id/name_page"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@color/background">
 
             <com.google.android.material.tabs.TabItem
@@ -54,11 +56,9 @@
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="65dp" />
+    </LinearLayout>
 </FrameLayout>

@@ -30,8 +30,8 @@ class PeopleActivity : AppCompatActivity() {
         val friendsList = arrayListOf("User6", "User7")
 
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
-        val adapter = ViewPagerPeopleAdapter(followingList, followersList, friendsList, supportFragmentManager, lifecycle)
-        viewPager.adapter = adapter
+        //val adapter = ViewPagerPeopleAdapter(followingList, followersList, friendsList, supportFragmentManager, lifecycle)
+        //viewPager.adapter = adapter
 
         val tabLayout: TabLayout = findViewById(R.id.tabLayout)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
@@ -47,7 +47,7 @@ class PeopleActivity : AppCompatActivity() {
         val close: ImageView = findViewById(R.id.close)
         close.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("openFragment", "ProfileFragment")  // Передаємо інформацію про фрагмент
+            intent.putExtra("openFragment", "ProfileFragment")
             startActivity(intent)
             finish()
         }

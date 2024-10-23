@@ -8,18 +8,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.exampl.HomeFragment
 import com.example.prepwise.LocaleHelper.loadLocale
 import com.example.prepwise.R
 import com.example.prepwise.fragments.AddDialogFragment
-import com.example.prepwise.fragments.HomeFragment
 import com.example.prepwise.fragments.LibraryFragment
 import com.example.prepwise.fragments.LikedFragment
-import com.example.prepwise.fragments.NewFollowersFragment
 import com.example.prepwise.fragments.ProfileFragment
+import com.example.prepwise.models.Question
+import com.example.prepwise.models.Set
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.time.LocalDate
 
 class MainActivity : AppCompatActivity() {
+
+    public
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -79,6 +84,50 @@ class MainActivity : AppCompatActivity() {
             val dialogFragment = AddDialogFragment()
             dialogFragment.show(supportFragmentManager, "CustomDialog")
         }
+
+
+        // Створюємо список сетів
+        val setList = arrayListOf(
+            Set(
+                name = "Android Development",
+                level = "Junior",
+                categories = arrayListOf("Android", "Kotlin"),
+                access = "public",
+                date = LocalDate.of(2023, 10, 1),
+                questions = arrayListOf(
+                    Question("What is Activity?", "A component in Android"),
+                    Question("What is Fragment?", "Part of a UI")
+                ),
+                username = "dev_junior",
+                isLiked = false
+            ),
+            Set(
+                name = "Data Science Basics",
+                level = "Intermediate",
+                categories = arrayListOf("Data Science", "Python", "Statistics"),
+                access = "private",
+                date = LocalDate.of(2022, 5, 15),
+                questions = arrayListOf(
+                    Question("What is DataFrame?", "A table-like structure in pandas"),
+                    Question("What is a variable?", "A container for data")
+                ),
+                username = "data_guru",
+                isLiked = false
+            ),
+            Set(
+                name = "Web Development with JavaScript",
+                level = "Senior",
+                categories = arrayListOf("JavaScript", "React"),
+                access = "public",
+                date = LocalDate.of(2021, 8, 30),
+                questions = arrayListOf(
+                    Question("What is a closure?", "A function with access to outer variables"),
+                    Question("What is DOM?", "Document Object Model")
+                ),
+                username = "web_master",
+                isLiked = true
+            )
+        )
     }
 
     private fun replaceFragment(fragment: Fragment) {

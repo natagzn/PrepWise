@@ -8,22 +8,23 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.prepwise.R
+import com.example.prepwise.SetListProvider
 import com.example.prepwise.SpaceItemDecoration
 import com.example.prepwise.adapters.AdapterSet
-import com.example.prepwise.adapters.AdapterSharedSet
 import com.example.prepwise.models.Set
-import com.example.prepwise.models.SharedSet
 
-class SharedFragment : Fragment() {
 
-    private lateinit var sharedList: ArrayList<SharedSet>
+class SetsFragment : Fragment() {
+
+    private lateinit var setList: ArrayList<Set>
+
     companion object {
-        private const val ARG_SHARED_LIST = "shared_list"
+        private const val ARG_SET_LIST = "set_list"
 
-        fun newInstance(sharedList: ArrayList<SharedSet>): SharedFragment {
-            val fragment = SharedFragment()
+        fun newInstance(setList: ArrayList<Set>): SetsFragment {
+            val fragment = SetsFragment()
             val args = Bundle()
-            args.putSerializable(ARG_SHARED_LIST, sharedList)
+            args.putSerializable(ARG_SET_LIST, setList)
             fragment.arguments = args
             return fragment
         }
@@ -33,30 +34,31 @@ class SharedFragment : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
             @Suppress("UNCHECKED_CAST")
-            sharedList = it.getSerializable(ARG_SHARED_LIST) as? ArrayList<SharedSet> ?: arrayListOf()
+            setList = it.getSerializable(ARG_SET_LIST) as? ArrayList<Set> ?: arrayListOf()
         }
     }
 
-    private var adapterSharedSet: AdapterSharedSet? = null
-    private lateinit var recyclerViewSharedSet: RecyclerView
+    private var adapterSet: AdapterSet? = null
+    private lateinit var recyclerViewSet: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_shared, container, false)
+        val view = inflater.inflate(R.layout.fragment_sets, container, false)
 
-        recyclerViewSharedSet = view.findViewById(R.id.shared_set_list)
-        recyclerViewSharedSet.layoutManager =
+        recyclerViewSet = view.findViewById(R.id.set_list)
+        recyclerViewSet.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        adapterSharedSet = AdapterSharedSet(sharedList, requireContext())
-        recyclerViewSharedSet.adapter = adapterSharedSet
+        adapterSet = AdapterSet(setList, requireContext(), "with access")
+        recyclerViewSet.adapter = adapterSet
 
         val spacingInDp = 10
         val scale = requireContext().resources.displayMetrics.density
         val spacingInPx = (spacingInDp * scale).toInt()
-        recyclerViewSharedSet.addItemDecoration(SpaceItemDecoration(spacingInPx))
+        recyclerViewSet.addItemDecoration(SpaceItemDecoration(spacingInPx))
+
         return view
     }
-
 }
+

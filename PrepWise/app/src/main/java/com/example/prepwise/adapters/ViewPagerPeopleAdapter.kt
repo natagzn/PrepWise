@@ -6,11 +6,12 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.prepwise.fragments.FriendFragment
+import com.example.prepwise.models.People
 
 class ViewPagerPeopleAdapter(
-    private val followingList: ArrayList<String>,
-    private val followersList: ArrayList<String>,
-    private val friendsList: ArrayList<String>,
+    private val followingList: ArrayList<People>,
+    private val followersList: ArrayList<People>,
+    private val friendsList: ArrayList<People>,
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle
 ) : FragmentStateAdapter(fragmentManager, lifecycle) {

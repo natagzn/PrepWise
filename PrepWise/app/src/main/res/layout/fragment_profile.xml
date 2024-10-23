@@ -80,7 +80,7 @@
                     style="@style/regular_16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="19dp"
+                    android:layout_marginBottom="20dp"
                     android:text="I am student of HPK"
                     android:textColor="@color/black" />
 

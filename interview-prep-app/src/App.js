@@ -26,6 +26,8 @@ import PasswordReset from './pages/Auth/PasswordReset/PasswordReset';
 import ConfirmEmail from './pages/Auth/ConfirmEmail/ConfirmEmail';
 import BuyPremium from './pages/BuyPremium/BuyPremium';
 import PeopleProfilePage from './pages/PeopleProfilePage/PeopleProfilePage';
+import LookFolder from './pages/Folders/LookFolder/LookFolder';
+import CreateEditFolder from './pages/Folders/CreateEditFolder/CreateEditFolder';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -55,6 +57,20 @@ function App() {
 
       <Route path="/buyPremium" element={<BuyPremium />} />
       <Route path="/profileUser" element={<PeopleProfilePage />} />
+
+      <Route
+        path="/folder"
+        element={
+          <LookFolder
+            folderName="Folder name"
+            visibility="Public"
+            count="2"
+            countQ="11"
+          />
+        }
+      />
+
+      <Route path="/createFolder" element={<CreateEditFolder />} />
       {/* Додай інші сторінки за потреби */}
     </Routes>
   );

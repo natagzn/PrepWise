@@ -79,29 +79,41 @@
 .tabs {
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px solid lightgray;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--maingray);
+  align-items: center;
+  text-align: center;
+  height: 60px; /* Встановлюємо фіксовану висоту для всього блоку вкладок */
 }
 
 .tab {
   padding: 10px 20px;
-  cursor: pointer;
-  color: gray;
   font-size: var(--web-23-regular-font-size);
+  cursor: pointer;
+  position: relative;
+  color: var(--maingray);
+  height: 100%; /* Таб має займати всю висоту батьківського контейнера */
+  display: flex;
+  align-items: center; /* Центрування тексту вертикально */
 }
 
 .tab:hover {
-  color: black;
+  color: var(--mainblack);
 }
 
 .active {
   font-weight: bold;
-  color: black;
-  border-bottom: 2px solid black;
+  color: var(--mainblack);
 }
 
-.tabContent {
-  padding: 20px;
+.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 4px;
+  width: 100%;
+  background-color: var(--landingdark-blue);
 }
 
 /* Адаптивність для планшетів та смартфонів */

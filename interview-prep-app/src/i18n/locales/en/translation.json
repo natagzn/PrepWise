@@ -115,5 +115,12 @@
   "new_followers": "New followers",
   "followed_from": "followed from",
 
-  "follow_back": "Follow back"
+  "follow_back": "Follow back",
+  "follow": "Follow",
+  "followings": "Followings",
+  "followers_profile": "Followers",
+
+  "unfollow_confirmation": "Are you sure you want to unfollow this user?",
+  "yes": "Yes",
+  "no": "No"
 }

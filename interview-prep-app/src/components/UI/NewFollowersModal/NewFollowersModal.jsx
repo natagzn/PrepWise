@@ -62,7 +62,7 @@ export default function NewFollowersModal({ onClose }) {
                     : '#144250',
                 }} // Змінюємо колір залежно від статусу
               >
-                {follower.following ? t('friends') : t('follow_back')}
+                {follower.following ? 'Friends' : 'Follow back'}
               </motion.button>
             </div>
           ))}

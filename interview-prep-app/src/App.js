@@ -25,6 +25,7 @@ import NewPassword from './pages/Auth/NewPassword/NewPassword';
 import PasswordReset from './pages/Auth/PasswordReset/PasswordReset';
 import ConfirmEmail from './pages/Auth/ConfirmEmail/ConfirmEmail';
 import BuyPremium from './pages/BuyPremium/BuyPremium';
+import PeopleProfilePage from './pages/PeopleProfilePage/PeopleProfilePage';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -53,6 +54,7 @@ function App() {
       <Route path="/settings" element={<SettingsPage />} />
 
       <Route path="/buyPremium" element={<BuyPremium />} />
+      <Route path="/profileUser" element={<PeopleProfilePage />} />
       {/* Додай інші сторінки за потреби */}
     </Routes>
   );

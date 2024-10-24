@@ -114,5 +114,11 @@
 
   "new_followers": "Нові підписники",
   "followed_from": "підписка від",
-  "follow_back": "Follow back"
+  "follow_back": "Follow back",
+  "follow": "Підписатись",
+  "followings": "Підписок",
+  "followers_profile": "Підписників",
+  "unfollow_confirmation": "Чи ви дійсно хочете відписатись від цього користувача?",
+  "yes": "Так",
+  "no": "Ні"
 }

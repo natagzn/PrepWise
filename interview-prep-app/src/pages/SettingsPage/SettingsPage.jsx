@@ -21,6 +21,7 @@ const SettingsPage = () => {
   const handleLanguageChange = (event) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
+    localStorage.setItem('language', selectedLanguage); // Зберігаємо вибір мови
   };
 
   const handleClick = () => {

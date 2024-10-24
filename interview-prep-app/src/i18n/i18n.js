@@ -8,11 +8,14 @@ const resources = {
   ua: { translation: translationUA },
 };
 
+// Отримуємо мову з localStorage або використовуємо 'en' за замовчуванням
+const savedLanguage = localStorage.getItem('language') || 'en';
+
 i18n
   .use(initReactI18next) // підключення i18next до React
   .init({
     resources,
-    lng: 'en', // мова за замовчуванням
+    lng: savedLanguage, // мова за замовчуванням базується на збереженій
     fallbackLng: 'en', // якщо немає перекладу для обраної мови
     interpolation: {
       escapeValue: false, // потрібно для React

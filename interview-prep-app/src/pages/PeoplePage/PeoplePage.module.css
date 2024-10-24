@@ -8,7 +8,7 @@
 
 .peoplePage {
   width: 600px;
-  height: 500px;
+  height: 520px;
   background: var(--mainwhite);
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -31,6 +31,8 @@
   font-size: var(--web-23-regular-font-size); /* Очищено на існуючу змінну */
   cursor: pointer;
   color: var(--maingray);
+  position: absolute;
+  padding: 5px;
 }
 
 .closeButton:hover {

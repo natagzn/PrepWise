@@ -40,6 +40,10 @@
   margin: 10px 0;
 }
 
+.peopleBlock {
+  cursor: pointer;
+}
+
 @media (max-width: 1220px) {
   .title {
     align-self: center;

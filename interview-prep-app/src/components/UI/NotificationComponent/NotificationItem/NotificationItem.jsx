@@ -17,31 +17,38 @@ const iconSettings = {
   People: { color: '#AFBED1', icon: peopleIcon },
 };
 
-const NotificationItem = ({
-  type,
-  title,
-  count,
-  message,
-  description,
-  date,
-  link, // Додаємо пропс для посилання
-}) => {
-  const { color, icon } = iconSettings[type] || {};
+const NotificationItem = (props) => {
+  const { color, icon } = iconSettings[props.type] || {};
   return (
-    <div className={styles.notificationItem}>
+    <div
+      className={styles.notificationItem}
+      onClick={props.onClick}
+      style={props.style}
+    >
       <NotificationHeader
         iconColor={color}
-        title={title}
-        count={count}
+        title={props.title}
+        count={props.count}
         icon={icon}
       />
       <NotificationText
-        message={message}
-        description={description}
-        date={date}
+        message={props.message}
+        description={props.description}
+        date={props.date}
       />
     </div>
   );
 };
 
 export default NotificationItem;
+
+/*
+type,
+  title,
+  count,
+  message,
+  description,
+  date,
+  link,
+  onClick,
+*/

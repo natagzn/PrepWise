@@ -110,5 +110,9 @@
   "month": "місяць",
   "get_prepwise_premium": "Отримати PrepWise Premium",
   "start_with_trial": "Почніть з 7-денної безкоштовної пробної версії",
-  "start_free_trial": "Розпочати безкоштовну пробну версію"
+  "start_free_trial": "Розпочати безкоштовну пробну версію",
+
+  "new_followers": "Нові підписники",
+  "followed_from": "підписка від",
+  "follow_back": "Follow back"
 }

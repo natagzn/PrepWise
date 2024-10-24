@@ -1,12 +1,25 @@
 // NotificationPage.js
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './NotificationPage.module.css'; // Імпорт стилів
 import HeaderComponent from '../../components/UI/HeaderComponent/HeaderComponent';
 import NotificationItem from '../../components/UI/NotificationComponent/NotificationItem/NotificationItem';
 import NotificationsList from '../../components/UI/NotificationComponent/NotificationList/NotificationList';
+import NewFollowersModal from '../../components/UI/NewFollowersModal/NewFollowersModal';
+import { useTranslation } from 'react-i18next';
 
 // доробити мови потім
 const NotificationPage = () => {
+  const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const notifications = [
     {
       type: 'People',
@@ -49,7 +62,7 @@ const NotificationPage = () => {
     <div>
       <HeaderComponent />
       <div className={styles.container}>
-        <h1 className={styles.title}>Notifications</h1>
+        <h1 className={styles.title}>{t('notifications')}</h1>
         {/*<div className={styles.notificationsContainer}>
         {notifications.map((notification, index) => (
           <NotificationItem key={index} {...notification} />
@@ -60,7 +73,8 @@ const NotificationPage = () => {
             type="People"
             title="New followers"
             count="3"
-            link="https://example.com/followers" // Додати посилання
+            onClick={openModal}
+            style={{ cursor: 'pointer' }}
           />
           <div className={styles.separator} />
           <NotificationItem
@@ -96,6 +110,8 @@ const NotificationPage = () => {
             link="https://example.com/question" // Додати посилання
           />
         </div>
+
+        {isModalOpen && <NewFollowersModal onClose={closeModal} />}
       </div>
     </div>
   );

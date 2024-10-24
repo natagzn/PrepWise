@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Імпортуємо motion
 import styles from './AvatarMenu.module.css';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
 const menuIcons = {
@@ -23,11 +24,9 @@ const menuLinks = {
 };
 
 const AvatarMenu = ({ onOpenPeoplePage }) => {
-  // Приймаємо функцію з HeaderComponent
-  const { translations } = useLanguage();
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
-
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -60,7 +59,14 @@ const AvatarMenu = ({ onOpenPeoplePage }) => {
         onClick={toggleMenu}
       />
       {isOpen && (
-        <div className={styles.menuPanel} ref={menuRef}>
+        <motion.div
+          className={styles.menuPanel}
+          ref={menuRef}
+          initial={{ opacity: 0, y: -10 }} // Початкове положення
+          animate={{ opacity: 1, y: 0 }} // Анімація при відкритті
+          exit={{ opacity: 0, y: -10 }} // Анімація при закритті
+          transition={{ duration: 0.2 }} // Час анімації
+        >
           <div className={styles.menu}>
             <div className={styles.userInfo}>
               <img
@@ -76,36 +82,46 @@ const AvatarMenu = ({ onOpenPeoplePage }) => {
             <div className={styles.separator} />
             {Object.entries(menuIcons).map(([key, src]) =>
               key === 'people' ? (
-                <div
+                <motion.div
                   key={key}
                   className={styles.menuItem}
                   onClick={onOpenPeoplePage}
+                  whileHover={{ scale: 1.05 }} // Збільшення при наведенні
+                  transition={{ duration: 0.2 }} // Час анімації
                 >
-                  {/* Викликаємо функцію відкриття модального вікна */}
                   <img className={styles.menuIcon} src={src} alt={key} />
-                  {translations[key] ||
-                    key.charAt(0).toUpperCase() + key.slice(1)}
-                </div>
+                  {t(key)}
+                </motion.div>
               ) : (
                 <Link to={menuLinks[key]} key={key} className={styles.menuItem}>
-                  <img className={styles.menuIcon} src={src} alt={key} />
-                  {translations[key] ||
-                    key.charAt(0).toUpperCase() + key.slice(1)}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }} // Збільшення при наведенні
+                    transition={{ duration: 0.2 }} // Час анімації
+                  >
+                    <img className={styles.menuIcon} src={src} alt={key} />
+                    {t(key)}
+                  </motion.div>
                 </Link>
               )
             )}
             <div className={styles.separator} />
-            <div
+            <motion.div
               className={`${styles.menuItem} ${styles.logoutItem}`}
               onClick={handleLogout}
+              whileHover={{ scale: 1.05 }} // Збільшення при наведенні
+              transition={{ duration: 0.2 }} // Час анімації
             >
-              {translations.logout || 'Log out'}
-            </div>
-            <div className={`${styles.menuItem} ${styles.feedbackItem}`}>
-              {translations.feedback || 'Help and feedback'}
-            </div>
+              {t('logout')}
+            </motion.div>
+            <motion.div
+              className={`${styles.menuItem} ${styles.feedbackItem}`}
+              whileHover={{ scale: 1.05 }} // Збільшення при наведенні
+              transition={{ duration: 0.2 }} // Час анімації
+            >
+              {t('feedback', 'Help and feedback')}
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   );

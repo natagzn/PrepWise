@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/UI/HeaderComponent/HeaderComponent
 import editIcon from './edit.svg';
 import EditModal from './EditModal/EditModal';
 import LanguageSwitcher from '../../components/UI/LanguageSwitcher/LanguageSwitcher';
+import { motion } from 'framer-motion';
 
 const SettingsPage = () => {
   const { t, i18n } = useTranslation(); // Destructure 't' for translations
@@ -39,7 +40,6 @@ const SettingsPage = () => {
 
       <div className={styles.settingsContainer}>
         <h1 className={styles.title}>{t('settings')}</h1>{' '}
-        {/* Use 't' for translations */}
         {/* Personal Information Block */}
         <div className={styles.personalInfoBlock}>
           <div className={styles.personalInfoTitle}>
@@ -108,18 +108,36 @@ const SettingsPage = () => {
         {/* Premium Block */}
         <div className={styles.premiumBlock}>
           <div className={styles.premiumLabel}>PrepWise Premium</div>
-          <div className={styles.premiumUpgradeButton}>Upgrade</div>
+          <motion.div
+            className={styles.premiumUpgradeButton}
+            whileHover={{ scale: 1.05, backgroundColor: '#dbc946' }} // Анімація при наведенні
+            transition={{ duration: 0.15 }}
+          >
+            Upgrade
+          </motion.div>
         </div>
         {/* Log out Block */}
         <div className={styles.logoutBlock}>
           <div className={styles.logoutTitle}>{t('logout')}:</div>
-          <div className={styles.logoutButton}>{t('logout')}</div>
+          <motion.div
+            className={styles.logoutButton}
+            whileHover={{ scale: 1.05, backgroundColor: '#dbc946' }} // Анімація при наведенні
+            transition={{ duration: 0.15 }}
+          >
+            {t('logout')}
+          </motion.div>
         </div>
         {/* Delete Account Block */}
         <div className={styles.deleteAccountBlock}>
           <div className={styles.deleteLabel}>{t('delete_akk')}:</div>
           <div className={styles.deleteDescription}>{t('delete_desc')}</div>
-          <div className={styles.deleteButton}>{t('delete_akk')}</div>
+          <motion.div
+            className={styles.deleteButton}
+            whileHover={{ scale: 1.05, backgroundColor: '#ec221f' }} // Зміна кольору для кнопки видалення
+            transition={{ duration: 0.15 }}
+          >
+            {t('delete_akk')}
+          </motion.div>
         </div>
       </div>
 

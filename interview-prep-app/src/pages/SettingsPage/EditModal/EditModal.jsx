@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next'; // Import useTranslation
-import styles from './EditModal.module.css';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { toast, ToastContainer } from 'react-toastify';
+import styles from './EditModal.module.css';
 
 const EditModal = ({ isOpen, onClose, userData, onSave }) => {
-  const { t } = useTranslation(); // Destructure t for translations
+  const { t } = useTranslation();
   const [formData, setFormData] = useState(userData);
-  const [avatar, setAvatar] = useState(null); // State for the uploaded image
+  const [avatar, setAvatar] = useState(null);
+  const [countries, setCountries] = useState([]); // Стан для країн
+  const [locationInput, setLocationInput] = useState(''); // Стан для вибору країни
+
+  useEffect(() => {
+    // Отримання списку країн
+    fetch('https://restcountries.com/v3.1/all')
+      .then((response) => response.json())
+      .then((data) => {
+        const countryNames = data.map((country) => country.name.common);
+        const sortedCountryNames = countryNames.sort(); // Сортуємо країни
+        setCountries(sortedCountryNames);
+      });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,30 +28,37 @@ const EditModal = ({ isOpen, onClose, userData, onSave }) => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    const validImageTypes = ['image/jpeg', 'image/png', 'image/gif']; // Allowed file types
+    const validImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
-    // Reset the file input value to avoid showing the previous file name
-    e.target.value = ''; // Clear the file input
+    e.target.value = '';
 
     if (file) {
       if (!validImageTypes.includes(file.type)) {
-        toast.error(
-          t('invalid_file_type') // Translate error message
-        ); // Show error toast
-        setAvatar(null); // Reset avatar state to null
+        toast.error(t('invalid_file_type'));
+        setAvatar(null);
         return;
       }
 
       const fileReader = new FileReader();
       fileReader.onloadend = () => {
-        setAvatar(fileReader.result); // Set the image preview
+        setAvatar(fileReader.result);
       };
       fileReader.readAsDataURL(file);
     }
   };
 
+  const handleLocationChange = (e) => {
+    setLocationInput(e.target.value); // Зберігаємо вибране значення
+  };
+
   const handleSave = () => {
-    const updatedData = { ...formData, avatar }; // Include avatar in the data
+    // Перевіряємо, чи введена країна є в списку
+    if (!countries.includes(locationInput)) {
+      toast.error(t('invalid_location')); // Відображаємо повідомлення про помилку
+      return;
+    }
+
+    const updatedData = { ...formData, avatar, location: locationInput };
     onSave(updatedData);
     onClose();
   };
@@ -48,21 +68,20 @@ const EditModal = ({ isOpen, onClose, userData, onSave }) => {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
-        <h2>{t('edit_information')}</h2>{' '}
-        {/* Use t for translating modal title */}
+        <h2>{t('edit_information')}</h2>
         <div>
-          <label>{t('avatar')}:</label> {/* Translate label */}
+          <label>{t('avatar')}:</label>
           <input type="file" accept="image/*" onChange={handleFileChange} />
           {avatar && (
             <img
               src={avatar}
-              alt={t('avatar_preview')} // Translate alt text for image
+              alt={t('avatar_preview')}
               className={styles.avatarPreview}
             />
           )}
         </div>
         <div>
-          <label>{t('username')}:</label> {/* Translate label */}
+          <label>{t('username')}:</label>
           <input
             type="text"
             name="username"
@@ -71,7 +90,7 @@ const EditModal = ({ isOpen, onClose, userData, onSave }) => {
           />
         </div>
         <div>
-          <label>{t('email')}:</label> {/* Translate label */}
+          <label>{t('email')}:</label>
           <input
             type="email"
             name="email"
@@ -80,7 +99,7 @@ const EditModal = ({ isOpen, onClose, userData, onSave }) => {
           />
         </div>
         <div>
-          <label>{t('description')}:</label> {/* Translate label */}
+          <label>{t('description')}:</label>
           <textarea
             name="description"
             value={formData.description}
@@ -88,20 +107,29 @@ const EditModal = ({ isOpen, onClose, userData, onSave }) => {
           />
         </div>
         <div>
-          <label>{t('location')}:</label> {/* Translate label */}
-          <input
-            type="text"
+          <label>{t('location')}:</label>
+          <select
             name="location"
-            value={formData.location}
-            onChange={handleChange}
-          />
+            value={locationInput}
+            onChange={handleLocationChange}
+          >
+            <option value="">{t('select_country')}</option>{' '}
+            {/* Заглушка для випадаючого списку */}
+            {countries.map((country, index) => (
+              <option key={index} value={country}>
+                {country}
+              </option>
+            ))}
+          </select>
         </div>
-        <button onClick={handleSave} className={styles.saveButton}>
-          {t('save')} {/* Translate Save button */}
-        </button>
-        <button onClick={onClose} className={styles.cancelButton}>
-          {t('cancel')} {/* Translate Cancel button */}
-        </button>
+        <div className={styles.buttons}>
+          <button onClick={handleSave} className={styles.saveButton}>
+            {t('save')}
+          </button>
+          <button onClick={onClose} className={styles.cancelButton}>
+            {t('cancel')}
+          </button>
+        </div>
       </div>
       <ToastContainer />
     </div>

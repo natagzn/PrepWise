@@ -30,11 +30,12 @@
   justify-content: flex-start;
   align-items: flex-end;
   gap: 15px;
+  width: fit-content;
 }
 
 .folderTitle {
-  font-size: 35px;
-  font-weight: 400;
+  font-size: var(--web-35-regular-font-size);
+  font-weight: 700;
   color: black;
   word-wrap: break-word;
   align-self: stretch;
@@ -53,27 +54,50 @@
 }
 
 .inputText {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Ставимо рамку */
+  border-radius: 15px; /* Краї */
+  font-size: var(--web-23-regular-font-size);
   color: #5a5a5a;
-  font-size: 23px;
-  font-weight: 400;
-  word-wrap: break-word;
 }
 
-.createUpdateButton {
+.createUpdateButton,
+.createUpdateButtonFooter,
+.cancelButton {
   height: 48px;
   padding: 7px 30px;
   background: var(--landingdark-blue);
   border-radius: 15px;
   border: 1px solid black;
   color: white;
-  font-size: 23px;
+  font-size: var(--web-23-regular-font-size);
   font-weight: 400;
   cursor: pointer;
 }
 
+.buttonBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.cancelButton {
+  width: 100%;
+  max-width: 300px;
+  background: var(--mainwhite);
+  border-radius: 15px;
+  border: 1px solid var(--landingdark-blue);
+  color: var(--landingdark-blue);
+}
+.createUpdateButtonFooter {
+  width: 100%;
+  max-width: 300px;
+}
+
 .setsCount {
   color: black;
-  font-size: 23px;
+  font-size: var(--web-23-regular-font-size);
   font-weight: 400;
   word-wrap: break-word;
   align-self: stretch;
@@ -85,47 +109,60 @@
   align-self: center;
 }
 
-@media (max-width: 1000px) {
-  .group {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 80%;
-    align-self: center;
-  }
+.footer {
+  display: none;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
 
-  .columnLeft,
+/* При малих екранах верхня кнопка пропадає, а футер з'являється */
+@media (max-width: 1000px) {
+  .buttonBlock {
+    display: none;
+  }
+  .group {
+    gap: 20px;
+  }
   .columnRight {
-    width: 100%;
     text-align: center;
   }
 
-  .columnRight {
-    align-items: center;
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px 20px;
   }
 
-  .inputField {
-    justify-content: center;
-  }
-
-  .setsCount {
-    order: 1; /* Встановлюємо, щоб кількість сетів була вище */
-  }
-
-  .createUpdateButton {
-    order: 2; /* Встановлюємо кнопку нижче */
-    width: 100%;
+  .createUpdateButtonFooter,
+  .cancelButton {
+    max-width: 200px;
   }
 }
 
-@media (max-width: 600px) {
+/* Для екранів менше 900px */
+@media (max-width: 900px) {
+  .folderTitle {
+    font-size: var(--web-30-regular-font-size);
+  }
+  .inputText,
+  .setsCount {
+    font-size: var(--web-23-regular-font-size);
+  }
+}
+
+/* Для екранів менше 700px */
+@media (max-width: 700px) {
   .group {
-    padding: 10px 20px;
     flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    margin-bottom: 0px;
   }
 
   .columnLeft,
@@ -133,4 +170,46 @@
     width: 100%;
     text-align: center;
   }
+
+  .columnLeft {
+    order: 1;
+  }
+
+  .columnRight {
+    order: 2;
+  }
+
+  .setsCount,
+  .inputText {
+    text-align: center;
+    font-size: var(--web-20-regular-font-size);
+  }
+
+  .folderTitle {
+    font-size: var(--web-23-regular-font-size);
+  }
+
+  .createUpdateButtonFooter,
+  .cancelButton {
+    font-size: 15px;
+  }
+}
+
+.createUpdateButton,
+.createUpdateButtonFooter,
+.cancelButton {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.createUpdateButton:hover,
+.createUpdateButtonFooter:hover {
+  background-color: #34228a; /* Зелений колір при наведенні */
+  transform: scale(1.05); /* Збільшення кнопки */
+}
+
+.cancelButton:hover {
+  background-color: #d4d4d4; /* Червоний колір при наведенні */
+  transform: scale(1.05);
 }

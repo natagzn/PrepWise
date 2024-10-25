@@ -3,6 +3,8 @@ import styles from './QuestionSetsComponentForFolders.module.css';
 import iconSet from './iconSet.svg';
 import iconAdd from './iconAdd.svg';
 import iconAdded from './iconAdded.svg';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const QuestionSetsComponentForFolders = ({
   name,
@@ -12,6 +14,7 @@ const QuestionSetsComponentForFolders = ({
   link,
   onToggle,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.container}>
       <div className={styles.iconContainer}>
@@ -20,10 +23,17 @@ const QuestionSetsComponentForFolders = ({
       <div className={styles.textContainer}>
         <div className={styles.setName}>{name}</div>
         <div className={styles.infoContainer}>
-          <div className={styles.questionCount}>{questionCount} questions</div>
+          <div className={styles.questionCount}>
+            {questionCount} {t('questions')}
+          </div>
         </div>
       </div>
-      <div className={styles.addedIcon} onClick={onToggle}>
+      <motion.div
+        className={styles.addedIcon}
+        onClick={onToggle}
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+      >
         {typeof isAdded !== 'undefined' && (
           <img
             src={isAdded ? iconAdded : iconAdd}
@@ -31,7 +41,7 @@ const QuestionSetsComponentForFolders = ({
             className={styles.actionIcon}
           />
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

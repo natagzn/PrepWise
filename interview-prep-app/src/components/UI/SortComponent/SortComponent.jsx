@@ -13,7 +13,7 @@ const SortComponent = ({ sortingOptions, onSortChange }) => {
   const handleOptionSelect = (option) => {
     setSelectedOption(option); // Оновлюємо вибрану опцію
     onSortChange(option.value); // Викликаємо функцію для зміни сортування
-    setIsOptionsVisible(false); // Закриваємо опції після вибору
+    toggleOptionsVisibility(); // Закриваємо опції після вибору
   };
 
   return (
@@ -21,16 +21,20 @@ const SortComponent = ({ sortingOptions, onSortChange }) => {
       <div className={styles.optionLabel} onClick={toggleOptionsVisibility}>
         {selectedOption.label}
       </div>
-      <img src={openIcon} alt="Open" className={styles.openIcon} />
+      <img
+        src={openIcon}
+        alt="Open"
+        className={styles.openIcon}
+        onClick={toggleOptionsVisibility}
+      />
 
-      {/* Відображаємо опції лише якщо isOptionsVisible є true */}
       {isOptionsVisible && (
         <div className={styles.sortOptionsContainer}>
           {sortingOptions.map((option, index) => (
             <div key={index}>
               <div
                 className={styles.sortOption}
-                onClick={() => handleOptionSelect(option)} // Викликаємо обробник при виборі опції
+                onClick={() => handleOptionSelect(option)}
               >
                 {option.label}
               </div>

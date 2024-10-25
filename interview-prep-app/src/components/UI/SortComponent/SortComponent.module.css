@@ -14,18 +14,19 @@
   font-size: var(--web-18-regular-font-size);
   font-family: var(--web-font-family);
   height: 100%;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .sortContainer {
-    font-size: var(--web-16-regular-font-size);
+    font-size: var(--web-15-regular-font-size);
     padding: 5px 15px;
     width: 90%;
   }
 }
 
 .optionLabel {
-  width: 197px;
+  width: auto;
   color: var(--mainblack);
   font-size: inherit;
   font-weight: 400;
@@ -61,7 +62,6 @@
   font-size: inherit;
   font-weight: 400;
   word-wrap: break-word;
-  cursor: pointer;
 }
 
 .separator {

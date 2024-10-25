@@ -122,5 +122,16 @@
 
   "unfollow_confirmation": "Are you sure you want to unfollow this user?",
   "yes": "Yes",
-  "no": "No"
+  "no": "No",
+
+  "A-Z": "A-Z",
+  "Z-A": "Z-A",
+
+  "create_a_folder": "Create a folder",
+  "update_a_folder": "Update a folder",
+  "enter_a_title": "Enter a title",
+  "Create": "Create",
+  "Update": "Update",
+  "Was chosen": "Was chosen",
+  "sets": "sets"
 }
